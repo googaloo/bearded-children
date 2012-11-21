@@ -1,0 +1,125 @@
+
+body {
+    background-color: #1280DB;
+}
+a {
+
+color: #ffa800;
+text-decoration:none;
+font-family: bandaregular;
+font-weight: bold;
+
+}
+
+a:hover {
+
+color:#ffcf71;
+
+}
+.kid-bg {
+    height: 1040px;
+    margin: -130px auto 0;
+    width: 1550px;
+}
+.content {
+    float: right;
+    margin-right: 275px;
+    margin-top: 325px;
+    width: 460px;
+}
+.growing {
+    clear: both;
+    color: #FFFFFF;
+    float: right;
+    font-family: bandaregular;
+    margin-right: -20px;
+    margin-top: 5px;
+    padding-bottom: 25px;
+}
+.email_container {
+    width: 100%;
+    position: relative;
+
+}
+
+.email_input {
+
+    float:right;
+margin-right: 5px;
+
+border-radius: 35px; 
+-moz-border-radius: 35px; 
+-webkit-border-radius: 35px; 
+border: 0px solid #800000;
+
+width: 350px;
+height: 50px;
+text-align: center;
+
+}
+
+.email_go {
+
+    float:right;
+position: absolute;
+right: 5px;
+top:72px;
+
+}
+
+.email_go:hover {
+    
+    cursor: pointer;
+    
+}
+
+.check-container {
+
+    color: #FFFFFF;
+    font-family: bandaregular;
+    padding-top: 75px;
+float:left;
+
+
+width:100%;
+
+}
+.check-out {
+    float: left;
+    margin-left: 90px;
+margin-top: 24px;
+    
+}
+.youtube-img {
+
+float:right;
+margin-right: -20px;
+
+}
+
+.email_thanks, .email_exists_text {
+
+color: #FFFFFF;
+font-family: bandaregular;
+float:right;
+font-size: 18px;
+
+}
+
+.bold {
+
+    font-size: 25px;
+
+}
+
+@font-face {
+    font-family: 'bandaregular';
+    src: url('fonts/bandaregular-webfont.eot');
+    src: url('fonts/bandaregular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bandaregular-webfont.woff') format('woff'),
+         url('fonts/bandaregular-webfont.ttf') format('truetype'),
+         url('fonts/bandaregular-webfont.svg#bandaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
