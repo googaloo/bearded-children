@@ -78,7 +78,6 @@ if( isset($the_email) ) {
 <title>Bearded Children - Throw away the aftershave!</title>
 <link href='<?php bloginfo("template_directory")?>/normalize.css' type='text/css' rel='stylesheet' />
 <link href='<?php bloginfo("template_directory")?>/coming-soon-style.css' type='text/css' rel='stylesheet' />
-<link href='<?php bloginfo("template_directory")?>/temp.css' type='text/css' rel='stylesheet' />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
 <!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -111,8 +110,27 @@ if( isset($the_email) ) {
     }
         
 }
-    
 
+@media screen and (max-width: 800px) {
+    
+    .kid-bg {
+
+        background: url('<?php echo bloginfo("template_directory"); ?>/images/coming-soon/800_BG.jpg') no-repeat;
+        
+    }
+        
+}
+
+@media screen and (max-width: 500px) {
+    
+    .kid-bg {
+
+        background: url('<?php echo bloginfo("template_directory"); ?>/images/coming-soon/mobile_landscape_BG.jpg') no-repeat;
+        
+    }
+        
+}
+    
 @media screen and (max-width: 400px) {
     
     .kid-bg {
