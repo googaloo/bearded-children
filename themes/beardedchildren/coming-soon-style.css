@@ -1,125 +1,221 @@
-
 body {
     background-color: #1280DB;
 }
 a {
-
-color: #ffa800;
-text-decoration:none;
-font-family: bandaregular;
-font-weight: bold;
-
+    color: #FFA800;
+    font-family: bandaregular;
+    font-weight: bold;
+    text-decoration: none;
 }
-
 a:hover {
-
-color:#ffcf71;
-
+    color: #FFCF71;
 }
 .kid-bg {
-    height: 1040px;
-    margin: -130px auto 0;
-    width: 1550px;
+    height: 755px;
+    margin: 0 auto;
+    width: 1329px;
 }
 .content {
     float: right;
-    margin-right: 275px;
-    margin-top: 325px;
+    margin-right: 100px;
+    margin-top: 390px;
     width: 460px;
+
 }
 .growing {
     clear: both;
     color: #FFFFFF;
     float: right;
     font-family: bandaregular;
-    margin-right: -20px;
+    margin-right: 30px;
     margin-top: 5px;
     padding-bottom: 25px;
 }
 .email_container {
-    width: 100%;
     position: relative;
-
+    width: 100%;
 }
-
 .email_input {
-
-    float:right;
-margin-right: 5px;
-
-border-radius: 35px; 
--moz-border-radius: 35px; 
--webkit-border-radius: 35px; 
-border: 0px solid #800000;
-
-width: 350px;
-height: 50px;
-text-align: center;
-
+    border: 0 solid #800000;
+    border-radius: 35px 35px 35px 35px;
+    float: right;
+    height: 50px;
+    margin-right: 5px;
+    text-align: center;
+    width: 350px;
 }
-
 .email_go {
-
-    float:right;
-position: absolute;
-right: 5px;
-top:72px;
-
+    float: right;
+    position: absolute;
+    right: 5px;
+    top: 75px;
 }
-
 .email_go:hover {
-    
     cursor: pointer;
-    
 }
-
 .check-container {
-
     color: #FFFFFF;
+    float: left;
     font-family: bandaregular;
-    padding-top: 75px;
-float:left;
-
-
-width:100%;
-
+    padding-top: 85px;
+    width: 100%;
 }
 .check-out {
     float: left;
-    margin-left: 90px;
-margin-top: 24px;
-    
+    margin-left: 80px;
+    margin-top: 24px;
 }
 .youtube-img {
-
-float:right;
-margin-right: -20px;
-
+    float: right;
+    margin-right: -20px;
 }
-
 .email_thanks, .email_exists_text {
-
-color: #FFFFFF;
-font-family: bandaregular;
-float:right;
-font-size: 18px;
-
+    color: #FFFFFF;
+    float: right;
+    font-family: bandaregular;
+    font-size: 18px;
 }
-
 .bold {
-
     font-size: 25px;
+}
+@font-face {
+    font-family: "bandaregular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/bandaregular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/bandaregular-webfont.woff") format("woff"), url("fonts/bandaregular-webfont.ttf") format("truetype"), url("fonts/bandaregular-webfont.svg#bandaregular") format("svg");
+}
+
+
+
+/* ////////////////////////////////////////////////////// */
+/* //////////// MEDIA QUIERIES /////////// */
+/* ////////////////////////////////////////////////////// */
+
+@media screen and (min-width: 1281px) {
+    
+    .kid-bg {
+       width: 1329px; height: 755px;
+    }
+    .content {
+        margin-right: 100px;
+        margin-top: 390px;
+    }
+    .growing {
+        margin-right: 30px;
+        margin-top: 5px;
+        padding-bottom: 25px;
+    }
+    .email_input {
+        margin-right: 5px;
+    }
+    .email_go {
+        right: 5px;
+        top: 74px;
+    }
+    .check-container {
+        padding-top: 85px;
+    }
+        
+}
+
+@media screen and (max-width: 1280px) {
+    
+    .kid-bg {
+        height: 595px;
+        width: 1043px;
+    }
+    .content {
+        font-size: 14px;
+        margin-right: 65px;
+        margin-top: 310px;
+    }
+    .growing {
+        padding-bottom: 20px;
+    }
+    .email_input {
+        height: 40px; width: 300px;
+        margin-right: 25px;
+    }
+    .email_go {
+        right: 15px;
+        top: 62px;
+        width: 58px;
+    }
+    .check-container {
+        float: right;
+        margin-right: 0px;
+        margin-top: 75px;
+        padding-top: 0;
+    }
 
 }
 
-@font-face {
-    font-family: 'bandaregular';
-    src: url('fonts/bandaregular-webfont.eot');
-    src: url('fonts/bandaregular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/bandaregular-webfont.woff') format('woff'),
-         url('fonts/bandaregular-webfont.ttf') format('truetype'),
-         url('fonts/bandaregular-webfont.svg#bandaregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+@media screen and (max-width: 1024px) {
+    
+     .kid-bg {
+        height: 550px;
+        width: 1002px;
+    }
+    .content {
+        font-size: 12px;
+        margin-right: 115px;
+        margin-top: 270px;
+    }
+    .growing {
+        padding-bottom: 25px;
+    }
+    .email_input {
+        height: 40px; width: 300px;
+        margin-right: 25px;
+    }
+    .email_go {
+        right: 15px;
+        top: 62px;
+        width: 58px;
+    }
+    .check-container {
+        float: right;
+        margin-right: 0px;
+        margin-top: 75px;
+        padding-top: 0;
+    }
+    
+}
 
+@media screen and (max-width: 400px) {
+    
+     .kid-bg {
+        width: 320px;
+    }
+    .content {
+        width: 320px;
+        font-size: 10px;
+        margin-top: 340px;
+        margin-right: 0;
+    }
+    .growing {
+        padding-bottom: 10px;
+        margin-right: 60px;
+    }
+    .email_input {
+        height: 30px; width: 230px;
+        margin-right: 60px;
+    }
+    .email_go {
+        right: 45px;
+        top: 42px;
+        width: 45px;
+    }
+    .check-container {
+        float: right;
+        margin-right: 0px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .youtube-img {
+        width: 140px;
+        float: left;
+        margin-left: 80px;
+}
+    
 }

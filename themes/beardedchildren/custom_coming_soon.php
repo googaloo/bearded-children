@@ -74,11 +74,56 @@ if( isset($the_email) ) {
 <!DOCTYPE html>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bearded Children - Throw away the aftershave!</title>
-<link href='<?php bloginfo("template_directory")?>/coming-soon-style.css' type='text/css' rel='stylesheet' />
 <link href='<?php bloginfo("template_directory")?>/normalize.css' type='text/css' rel='stylesheet' />
+<link href='<?php bloginfo("template_directory")?>/coming-soon-style.css' type='text/css' rel='stylesheet' />
+<link href='<?php bloginfo("template_directory")?>/temp.css' type='text/css' rel='stylesheet' />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<style type="text/css" rel="stylesheet">
+    
+    .kid-bg {
+        
+        background: url('<?php echo bloginfo("template_directory"); ?>/images/coming-soon/background-kid.jpg') no-repeat;
+        
+    }
+    
+@media screen and (max-width: 1280px) {
+
+    .kid-bg {
+        
+        background: url('<?php echo bloginfo("template_directory"); ?>/images/coming-soon/1280_BG.jpg') no-repeat;
+    
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .kid-bg {
+
+        background: url('<?php echo bloginfo("template_directory"); ?>/images/coming-soon/1024_BG.jpg') no-repeat;
+        
+    }
+        
+}
+    
+
+@media screen and (max-width: 400px) {
+    
+    .kid-bg {
+
+        background: url('<?php echo bloginfo("template_directory"); ?>/images/coming-soon/mobile_BG.jpg') no-repeat;
+        
+    }
+        
+}
+    
+</style>
 
 <?php
     wp_head();
@@ -90,11 +135,10 @@ if( isset($the_email) ) {
     
     <div class = 'container'>
         
-        <div class = "kid-bg" style="background: url('<?php echo bloginfo("template_directory"); ?>/images/coming-soon/background-kid.jpg') no-repeat;">
+        <div class = "kid-bg" >
         
             <div class = 'content' id="content">
 
-                <img src = "<?php echo bloginfo('template_directory'); ?>/images/coming-soon/relax-header.png" />
                 <h2 class = 'growing'>our beards are still growing.</h2>
                 
                 <div class = "email_container">
