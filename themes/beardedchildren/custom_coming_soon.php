@@ -111,7 +111,7 @@ if( isset($the_email) ) {
         
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 915px) {
     
     .kid-bg {
 
@@ -121,7 +121,7 @@ if( isset($the_email) ) {
         
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
     
     .kid-bg {
 
@@ -131,7 +131,7 @@ if( isset($the_email) ) {
         
 }
     
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
     
     .kid-bg {
 

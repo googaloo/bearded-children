@@ -48,7 +48,7 @@ a:hover {
     float: right;
     position: absolute;
     right: 5px;
-    top: 75px;
+    top: -6px;
 }
 .email_go:hover {
     cursor: pointer;
@@ -69,11 +69,15 @@ a:hover {
     float: right;
     margin-right: -20px;
 }
+.email_container {
+    float: right;  
+}
 .email_thanks, .email_exists_text {
     color: #FFFFFF;
     float: right;
     font-family: bandaregular;
-    font-size: 18px;
+    font-size: 16px;
+    text-align: right;
 }
 .bold {
     font-size: 25px;
@@ -110,7 +114,7 @@ a:hover {
     }
     .email_go {
         right: 5px;
-        top: 74px;
+        top: -6px;
     }
     .check-container {
         padding-top: 85px;
@@ -138,7 +142,7 @@ a:hover {
     }
     .email_go {
         right: 15px;
-        top: 62px;
+
         width: 58px;
     }
     .check-container {
@@ -170,7 +174,7 @@ a:hover {
     }
     .email_go {
         right: 15px;
-        top: 62px;
+
         width: 58px;
     }
     .check-container {
@@ -179,10 +183,17 @@ a:hover {
         margin-top: 75px;
         padding-top: 0;
     }
+    .email_container {
+        font-size: 16px; 
+        margin-right:25px;
+    }
+    .email_thanks, .email_exists_text {
+        font-size: 14px;
+    }
     
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 915px) {
     
     .kid-bg {
         height: 427px;
@@ -204,7 +215,7 @@ a:hover {
     }
     .email_go {
         right: 15px;
-        top: 62px;
+
         width: 58px;
     }
     .check-container {
@@ -213,15 +224,28 @@ a:hover {
         margin-top: 35px;
         padding-top: 0;
     }
+    .email_container {
+        font-size: 14px; 
+        margin-right:10px;
+        width: 350px;
+    }
+
+    .email_thanks, .email_exists_text {
+        font-size: 12px;
+
+        width: 100%;
+
+    }
     
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
     
      .kid-bg {
         width: 480px; 
         margin-top: -30px;
-        margin-left: -25px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .content {
         width: 320px;
@@ -235,11 +259,11 @@ a:hover {
     }
     .email_input {
         height: 30px; width: 190px;
-        margin-right: 60px;
+        margin: 0 auto
     }
     .email_go {
-        right: 45px;
-        top: 34px;
+        right: -15px;
+        top: -3px;
         width: 40px;
     }
     .check-container {
@@ -251,11 +275,22 @@ a:hover {
     .youtube-img {
         width: 140px;
         float: right;
-}
+    }
+    .email_container {
+        font-size: 10px; 
+        margin-right:40px;
+    }
+    .email_thanks, .email_exists_text {
+        font-size: 10px;
+        width: 100%;
+    }
+    .bold {
+        font-size: 18px;
+    }
     
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
     
      .kid-bg {
         width: 320px;
@@ -275,11 +310,11 @@ a:hover {
     }
     .email_input {
         height: 30px; width: 230px;
-        margin-right: 60px;
+        margin: 0 auto;
     }
     .email_go {
-        right: 45px;
-        top: 42px;
+        right: 0px;
+        top: -6px;
         width: 45px;
     }
     .check-container {
@@ -292,6 +327,13 @@ a:hover {
         width: 140px;
         float: left;
         margin-left: 80px;
-}
+    }
+    .email_container {
+        font-size: 10px; 
+        margin-right:65px;
+    }
+    .email_thanks, .email_exists_text {
+        font-size: 10px;
+    }
     
 }

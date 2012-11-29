@@ -10,14 +10,14 @@ function collect_email($email) {
    global $wpdb;
    
     $result = $wpdb->query (
-                                    $wpdb->prepare ( 
-                                            "
-                                                
-                                                SELECT * FROM viewer_emails
-                                                WHERE emails = '$email'
+        $wpdb->prepare ( 
+            "
 
-                                            "
-                                            ) );
+            SELECT * FROM viewer_emails
+            WHERE emails = '$email'
+
+            "
+    ) );
 
     if ( $result == 0 ) {
         
