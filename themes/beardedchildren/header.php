@@ -30,11 +30,13 @@
         
         <div class='masthead'>
         
-            <div class='logo-box'></div>
+            <div class='logo-box'><a href='<?php site_url(); ?>'>Bearded Children</a></div>
             <nav class='main-nav'>
                 <?php $li_pages_args = array(
                   
-                    'title_li' => ''
+                    'title_li' => '',
+                    'exclude' => 6,
+                    'sort_column' => 'menu_order'
                     
                 );
                 
