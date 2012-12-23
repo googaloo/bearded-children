@@ -1,0 +1,103 @@
+/*
+  Slider styles for Bearded Children custom slider  
+*/
+
+/* ///////////////////
+//// ADMIN ///////////
+////////////////////*/
+
+.bc-slider-admin-wrapper {
+    width:80%;
+}
+.bc-add-slide-btn {
+    margin-top: 10px;
+}
+.bc-submit-btn {
+    float: right;
+}
+#bc_slide_options_container {
+    width: 100%;
+    
+}
+.bc-new-slide-box {
+    margin-top: 23px;
+    padding-bottom: 15px;
+    border: solid 1px #b0b0b0;
+    float:left;
+    width: 100%;
+
+}
+.bc-slider-slide-num {
+    width: 100%;
+    background-color: #E2E2E2;
+    line-height: 1.5em;
+    text-indent: 3em;
+    font-size: 2.5em;
+    color: #272727;
+    margin: 0;
+    border-bottom: solid 1px #b0b0b0;
+}
+.bc-slider-admin-title {
+    font-size: 1em;
+    color: #272727;
+    margin-left: 25px;
+    margin-top:0;
+    margin-bottom:5px;
+}
+.bc-slider-input {
+     margin-left: 25px;   
+}
+.bc-admin-seperator {
+     margin-bottom: 25px;   
+}
+.bc-submit-btn {
+    margin-top: 5px;
+    padding: 5px;
+    display: none;
+}
+.bc-add-slide-btn {
+    padding: 5px 10px;
+    float: left;
+    clear:both;
+}
+.bc-ie-text {
+    font-size: 1em;
+    color: #717171;
+    margin-left: 15px;
+}
+.bc-admin-slider-left {
+    float:left;
+    width: 60%;
+    margin-top: 25px;
+}
+.bc-admin-slider-right {
+    float: right;
+    width: 32%;
+    margin-top: 25px;
+}
+.bc-slider-admin-sidebar-box {
+    float: left;
+    width: 100%;
+    border: solid 1px #CCC;
+    margin-top: 25px;
+    margin-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+.bc-slider-admin-sidebar-box select {
+     float: left;   
+     margin-left: 25px;
+}
+.bc-slider-admin-sidebar-box input {
+     float: right;   
+     margin-right: 10px;
+}
+.bc-slider-admin-subtitle {
+     margin-left: 25px;   
+}
+
+/* ///////////////////
+//// SLIDER STYLES ///
+////////////////////*/
+
