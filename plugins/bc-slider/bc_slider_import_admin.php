@@ -65,14 +65,15 @@
 
         $num_existing_slides = get_option("bc-slider-num-slides");
         $n=0;
-        echo '<script type="text/javascript">add_slide();</script>';
         if( $num_existing_slides > 0 ) {
 
-            while( $n <= $num_existing_slides ) {
-                echo '<script type="text/javascript">add_slide();</script>';
+			echo '<script type="text/javascript">window.onload = function() { ';
+            while( $n+1 <= $num_existing_slides ) {
+                echo 'add_slide();';
                 $n++;
             }
-            echo '<script type="text/javascript">populate_sliders();</script>';
+			echo '}</script>';
+           // echo '<script type="text/javascript">populate_sliders();</script>';
         } 
 
      }
