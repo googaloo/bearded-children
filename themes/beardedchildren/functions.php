@@ -60,7 +60,7 @@ function bc_slider_registration() {
 			'has_archive' => true,
 			'description' => __( 'This is the official Bearded Children Slider for the front page yall' ),
 			'menu_position' => 100,
-			'supports' => array ( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'page-attributes', 'poat-formats')
+			'supports' => array ( 'title', 'editor')
 			
 		)
 			
@@ -68,14 +68,8 @@ function bc_slider_registration() {
 			
 }
 
+// Custom write panels for BC Slider //////////////////////////////////
+// using WP	Alchemy http://www.farinspace.com/wpalchemy-metabox/#download ////////////////
+
 include_once 'metaboxes/setup.php';
-
-include_once 'metaboxes/simple-spec.php';
- 
-//include_once 'metaboxes/full-spec.php';
-
-//include_once 'metaboxes/checkbox-spec.php';
-
-//include_once 'metaboxes/radio-spec.php';
-
-//include_once 'metaboxes/select-spec.php';
+include_once 'metaboxes/bc-slider-spec.php';
