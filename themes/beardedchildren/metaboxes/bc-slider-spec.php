@@ -1,6 +1,6 @@
 <?php
 // Description
-$custom_meta_descr_text = new WPAlchemy_MetaBox(array
+$custom_meta_textarea = new WPAlchemy_MetaBox(array
 (
 	'id' => '_bc_slider_meta_descr_text',
 	'title' => 'Slide Description',
@@ -11,7 +11,7 @@ $custom_meta_descr_text = new WPAlchemy_MetaBox(array
 ));
 
 //Button Text
-$custom_meta_btn_text = new WPAlchemy_MetaBox(array
+$custom_meta_text = new WPAlchemy_MetaBox(array
 (
 	'id' => '_bc_slider_meta_btn_text',
 	'title' => 'Button Text',
