@@ -1,17 +1,1 @@
-/* 
-    Document   : style
-    Created on : Oct 17, 2012, 5:09:43 PM
-    Author     : Odoms
-    Description:
-        Purpose of the stylesheet follows.
-*/
-
-root { 
-    display: block;
-}
-
-.search-btn {
-    position: relative;
-    left: -28px;
-    top: 3px;
-}
+root{display:block}.search-btn{position:relative;left:-28px;top:3px}.bc-slider-mask .bc-slider-box{width:890px;height:335px}

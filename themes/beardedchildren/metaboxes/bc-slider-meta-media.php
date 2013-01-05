@@ -6,7 +6,7 @@
  
     <p>
         <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
-        <?php echo $wpalchemy_media_access->getButton(array('label' => 'Set Slider image (ie: 960 x 480)')); ?>
+        <?php echo $wpalchemy_media_access->getButton(array('label' => 'Set Slider image (ie: 890 x 335)')); ?>
     </p>
  
     <?php $mb->the_field('sidebar-img'); ?>
@@ -14,7 +14,7 @@
  
     <p>
         <?php echo $wpalchemy_media_access->getField(array('name' => $mb->get_the_name(), 'value' => $mb->get_the_value())); ?>
-        <?php echo $wpalchemy_media_access->getButton(array('label' => 'Set Side image (ie: 450 x 360)')); ?>
+        <?php echo $wpalchemy_media_access->getButton(array('label' => 'Set Side image (ie: 210 x 125)')); ?>
     </p>
  
 </div>
