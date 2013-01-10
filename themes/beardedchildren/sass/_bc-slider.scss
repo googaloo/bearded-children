@@ -1,4 +1,44 @@
-.bc-slider-mask .bc-slider-box {
+.bc-slider-mask {
+	overflow: hidden;
+	position: relative;
+}
+
+.bc-slider-mask, .bc-slider-box {
 	width: 890px;
 	height: 335px;
 }
+
+.bc-slider-container {
+	height: 335px;
+	float: left;
+}
+
+.bc-slider-sidebar {
+	width: 210px;
+	height: 335px;
+	background: $BCblue;
+	float: right;
+}
+
+.slides-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 2300px;
+	position: absolute;
+}
+.slides-list li {
+	float: left;
+}
+.bc-slider-nav-container {
+  width: 100%; 
+  text-align: center;
+  }
+
+.bc-slider-nav-text {
+  width: 40%;
+  cursor: pointer;
+  cursor: hand;
+  margin-left: 20px; 
+  font-size: 1.5em;
+  }

@@ -12,6 +12,7 @@
 <meta name="viewport" content="width=device-width" />
 <title></title>
 <link type='text/css' rel='stylesheet' href='<?php bloginfo('template_directory'); ?>/style.css' />
+<?php wp_enqueue_script("jquery"); ?>
 
 <?php wp_head(); ?>
 </head>

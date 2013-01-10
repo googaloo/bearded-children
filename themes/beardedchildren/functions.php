@@ -6,7 +6,8 @@
 
 add_action ( 'wp_enqueue_scripts', 'start_scripts' );
 function start_scripts() {
-	wp_enqueue_script('http://code.jquery.com/jquery-latest.min.js');
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('scrollto', get_template_directory_uri().'/js/jquery.scrollTo-1.4.3.1-min.js');
 }
 
 //////////////////////////////////////////////////////////////////
