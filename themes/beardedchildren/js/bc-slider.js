@@ -30,7 +30,11 @@ jQuery(document).ready(function($) {
 			
 			$('ul.slides-list').animate({
 			left: '+=890' },
-			500
+			500,
+			function() { // Remove extra / duplicate slides
+				var numSlidesIndex = numSlides -1;
+				$('.slides-list li:gt('+numSlidesIndex+')').remove();
+			}
 			);
 
 		} else {
@@ -45,12 +49,32 @@ jQuery(document).ready(function($) {
 	});
 	
 	// Handle Next Button
+	// Append the slides on the end for infinite scrolling through slides
 	$('.bc-slider-nav-next').click( function() {
 		
-		$('ul.slides-list').animate({
+		if(currentSlide == numSlides) {
+			currentSlide = 1;
+			// Append copy of slides to end of slides list
+			$('.slides-list').append(slidesHTML);
+			// Reset position of the current slide
+			$('ul.slides-list').animate({
 			left: '-=890' },
-			500
-		);
+			500,
+			function() { // Remove extra / duplicate slides
+				var numSlidesIndex = numSlides -1;
+				$('.slides-list li:lt('+numSlides+')').remove();
+				$('.slides-list').css("left", '0px');
+			}
+			);
+				
+		} else {
+		
+			$('ul.slides-list').animate({
+				left: '-=890' },
+				500
+			);
+			currentSlide++;
+		}
 
 	});
 
