@@ -13,14 +13,14 @@
 <div class='bc-slider-mask'>
 <div class='bc-slider-container'>
 	<!-- width determined by $num_slides -->
-	<ul class='slides-list' style='width: <?php echo 890 * $num_slides; ?>px;'>
+	<ul class='slides-list' style='width: <?php echo (890 * $num_slides) + 1780; ?>px;'>
 
 <?php
 	
 	$count = 1;
 
 	while ( $loop->have_posts() ) : $loop->the_post();
-		
+	
 		// Button Text and Link /////
 		global $custom_meta_text;
 		$custom_meta_text->the_meta();
@@ -38,7 +38,7 @@
 		<div class='bc-slider-box-<?php echo $count ?> bc-slider-box' style='background: url("<?php $custom_meta_media->the_value('main-slide-img'); ?>");'>
 		
 			<div class='bc-slider-sidebar bc-slider-sidebar-<?php echo $count; ?>'>
-			
+
 				<img src='<?php $custom_meta_media->the_value('sidebar-img'); ?>' />
 				<p class='bc-slider-description'><?php $custom_meta_textarea->the_value('description'); ?></p>
 				<button class='bc-slider-button' onclick="window.location.href='<?php $custom_meta_text->the_value('link'); ?>'"><?php $custom_meta_text->the_value('btn'); ?></button>
@@ -47,8 +47,9 @@
 			
 		</div> <!-- end .bc-slider-box-<?php echo $count ?> -->
 		</li>
+		
 	<?php $count++; ?>
-	<?php endwhile; ?>
+	<?php endwhile; // end loop ?>
 	</ul> <!-- end .slides-list -->
 </div><!-- end .bc-slider-container -->
 </div><!-- end .bc-slider-mask -->
