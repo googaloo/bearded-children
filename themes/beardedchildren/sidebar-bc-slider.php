@@ -63,7 +63,7 @@
 	
 	$nav_count = 1;
 	while($nav_count <= $num_slides) {
-		echo '<span class="bc-slider-nav-text nav-circle-'.$nav_count.'" onclick="bcChangeSlide(\'slide-'.$nav_count.'\');" >&bull;</span>';
+		echo '<span class="bc-slider-nav-text nav-circle" data-seq="'.$nav_count.'" >&bull;</span>';
 		$nav_count++;
 	}
 	
