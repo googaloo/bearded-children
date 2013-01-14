@@ -9,7 +9,7 @@
 	<p>
 		<?php $metabox->the_field('link'); ?>
 		<input type="text" name="<?php $metabox->the_name(); ?>" value="<?php $metabox->the_value(); ?>" placeholder="http://" />
-		</br><span>Enter the Link</span>
+		</br><span>Enter the Link (Be sure to use "http://")</span>
 	</p>
 
 </div>

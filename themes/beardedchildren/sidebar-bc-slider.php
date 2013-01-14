@@ -10,6 +10,25 @@
 	
 ?>
 
+<!-- navigation -->
+<div class='bc-slider-nav-container'>
+	
+	<span class='bc-slider-nav-text bc-slider-nav-prev'>&lang;</span>
+	
+	<?php
+	
+	$nav_count = 1;
+	while($nav_count <= $num_slides) {
+		echo '<span class="bc-slider-nav-text nav-circle" data-seq="'.$nav_count.'" >&bull;</span>';
+		$nav_count++;
+	}
+	
+	?>
+	
+	<span class='bc-slider-nav-text bc-slider-nav-next'>&rang;</span>
+	
+</div>
+
 <div class='bc-slider-mask'>
 <div class='bc-slider-container'>
 	<!-- width determined by $num_slides -->
@@ -54,21 +73,3 @@
 </div><!-- end .bc-slider-container -->
 </div><!-- end .bc-slider-mask -->
 
-<!-- navigation -->
-<div class='bc-slider-nav-container'>
-	
-	<span class='bc-slider-nav-text bc-slider-nav-prev'>&lang;</span>
-	
-	<?php
-	
-	$nav_count = 1;
-	while($nav_count <= $num_slides) {
-		echo '<span class="bc-slider-nav-text nav-circle" data-seq="'.$nav_count.'" >&bull;</span>';
-		$nav_count++;
-	}
-	
-	?>
-	
-	<span class='bc-slider-nav-text bc-slider-nav-next'>&rang;</span>
-	
-</div>
