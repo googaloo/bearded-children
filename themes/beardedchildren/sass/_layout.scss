@@ -23,11 +23,20 @@ html[xmlns] .clearfix {
 
 /* LAYOUT */
 root { 
-    display: block;
+	display: block;
+}
+
+.main-container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.content-container {
+	width:  890px;
 }
 
 .search-btn {
-    position: relative;
-    left: -28px;
-    top: 3px;
+	position: relative;
+	left: -28px;
+	top: 3px;
 }

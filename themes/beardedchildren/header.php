@@ -27,28 +27,28 @@
         <a href='#' class='social-link social-em'>Email</a>
         
     </div>
+	
+	
     <div class='main-container'>
         
-        <div class='masthead'>
-        
-            <div class='logo-box'><a href='<?php site_url(); ?>'>Bearded Children</a></div>
-            <nav class='main-nav'>
-                <?php $li_pages_args = array(
-                  
-                    'title_li' => '',
-                    'exclude' => 6,
-                    'sort_column' => 'menu_order'
-                    
-                );
-                
-                ?>
-                <?php wp_list_pages($li_pages_args); ?>
+	<div class='adbox adbox1'>
+		
+		<div class='temp-ad-box' style='width: 150px; height: 225px; background: #CCC; float: right;'></div>
+		
+	</div>
+	    
+	    <div class='content-container'>
+	    
+		<div class='masthead'>
 
-            </nav>
-            <div class='search-bar-box'>
-                
-                <?php include('searchform.php'); ?>
-                
-            </div><!-- end search-bar-box -->
-            
-        </div><!-- end masthead -->
+		    <div class='logo-box'><a href='<?php site_url(); ?>'>Bearded Children</a></div>
+		    <nav class='main-nav'>
+		  <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+		    </nav>
+		    <div class='search-bar-box'>
+
+			   <?php include('searchform.php'); ?>
+
+		    </div><!-- end search-bar-box -->
+
+		</div><!-- end masthead -->
