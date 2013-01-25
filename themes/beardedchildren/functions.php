@@ -63,7 +63,7 @@ function collect_email($email) {
                 
 }
 
-// end collect_email /////////////////////////////////////////////////////////////
+
 // BC Slider Custom Post Type ////////////////////////////////////////////////////
 
 add_action ( 'init', 'bc_slider_registration' );
