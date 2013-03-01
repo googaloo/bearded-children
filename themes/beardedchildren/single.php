@@ -1,6 +1,6 @@
 <?php
 
-// Generic Page for Bearded Children
+// Generic  default for single post page for articles 
 
 ?>
 

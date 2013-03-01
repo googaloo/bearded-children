@@ -17,15 +17,20 @@ if ( $loop->have_posts() ) :
 
 		<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 		
-		<?php $videoThumb = str_replace('http://www.youtube.com/watch?v=','http://img.youtube.com/vi/',$videoThumb); ?>
-		<?php  $videoThumb .= "/2.jpg"; ?>
-		
-		<?php $theLink= the_content(); ?>
+		<?php $theLink= get_the_content(); ?>
 		<?php $linkExplode = explode("=", $theLink); ?>
-		<?php echo "<script type='text/javascript'>alert('".$linkExplode[0]."');</script>" ?>
-		<?php echo $linkExplode[1]; ?>
-		<?php the_content(); ?>
+		<a href="<?php the_permalink(); ?>"><img src="http://img.youtube.com/vi/<?php echo $linkExplode[1]; ?>/mqdefault.jpg" /></a>
 
+		<?php 
+		
+		$meta_channel = get_post_meta(get_the_id(), 'wpcf-channel', true); 
+		$meta_descr = get_post_meta(get_the_id(), 'wpcf-description', true); 
+		
+		?>
+		
+		<p>Channel: <?php echo $meta_channel; ?></p>
+		<p>Description: <?php echo $meta_descr; ?></p>
+		
 	<?php endwhile;
 
 endif; ?>
