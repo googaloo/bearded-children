@@ -62,33 +62,3 @@ function collect_email($email) {
     return $result;
                 
 }
-
-
-// BC Slider Custom Post Type ////////////////////////////////////////////////////
-
-add_action ( 'init', 'bc_slider_registration' );
-
-function bc_slider_registration() {
-	
-	register_post_type('bc-slider',
-			
-		array(
-				
-			'labels' => array (
-				'name' => __( 'BC Slider' ),
-				'singular_name' => __( 'Slide' ),
-				'add_new_item' => __( 'Add Slide' ),
-				'new_item' => __( 'cheese' )
-			),
-			
-			'public' => true,
-			'has_archive' => true,
-			'description' => __( 'This is the official Bearded Children Slider for the front page yall' ),
-			'menu_position' => 100,
-			'supports' => array ( 'title', 'editor')
-			
-		)
-			
-	);
-			
-}

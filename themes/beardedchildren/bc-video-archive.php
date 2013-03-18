@@ -12,13 +12,14 @@
 	
 	<?php
 	$num_channels=wp_count_posts('bc-channel')->publish;
-	$args = array('post_type' => 'bc-channel');
+	$args = array('post_type' => 'bc-channel', 'orderby' => 'menu_order', 'order' => 'ASC');
 	$channel = get_posts($args);
 
 	for($i=1; $i<=$num_channels; $i++): ?>
 
 		<h2><?php echo $channel[$i-1]->post_title; ?></h2>
 		<div><?php echo get_the_post_thumbnail($channel[$i-1]->ID, 'thumbnail'); ?></div>
+		<div><?php echo $channel[$i-1]->post_content; ?></div>
 
 		<?php
 		$skits_loop = new WP_Query(array('post_type'=>'bc-videos'));

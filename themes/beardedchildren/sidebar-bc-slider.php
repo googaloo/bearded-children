@@ -1,6 +1,6 @@
 <?php
 
-	wp_enqueue_script('bc=slider-js', get_template_directory_uri().'/js/bc-slider.js');
+	wp_enqueue_script('bc-slider.js', get_template_directory_uri().'/js/bc-slider.js');
 
 	$args = array( 'post_type' => 'bc-slider', 'posts_per_page' => 10 );
 	$loop = new WP_Query( $args );
@@ -27,7 +27,7 @@
 	
 	<span class='bc-slider-nav-text bc-slider-nav-next'>&rang;</span>
 	
-</div>
+</div><!-- end .bc-slider-nav-container -->
 
 <div class='bc-slider-mask'>
 <div class='bc-slider-container'>
@@ -39,28 +39,21 @@
 	$count = 1;
 
 	while ( $loop->have_posts() ) : $loop->the_post();
-	
-		// Button Text and Link /////
-		global $custom_meta_text;
-		$custom_meta_text->the_meta();
-		
-		// Main Slide and Sidebar Image
-		global $custom_meta_media;
-		$custom_meta_media->the_meta();
-		
-		// Description
-		global $custom_meta_textarea;
-		$custom_meta_textarea->the_meta();
+
+		$main_img = get_post_meta ( get_the_id(), 'wpcf-main-image', true );
+		$sidebar_img = get_post_meta ( get_the_id(), 'wpcf-sidebar-img', true );
+		$btn_url = get_post_meta ( get_the_id(), 'wpcf-btn-url', true );
+		$btn_txt = get_post_meta ( get_the_id(), 'wpcf-btn-text', true );
 			
 ?>
 		<li>
-		<div class='bc-slider-box-<?php echo $count ?> bc-slider-box' style='background: url("<?php $custom_meta_media->the_value('main-slide-img'); ?>");'>
+		<div class='bc-slider-box-<?php echo $count; ?> bc-slider-box' style='background: url("<?php echo $main_img; ?>");'>
 		
 			<div class='bc-slider-sidebar bc-slider-sidebar-<?php echo $count; ?>'>
 
-				<img src='<?php $custom_meta_media->the_value('sidebar-img'); ?>' />
-				<p class='bc-slider-description'><?php $custom_meta_textarea->the_value('description'); ?></p>
-				<button class='bc-slider-button' onclick="window.location.href='<?php $custom_meta_text->the_value('link'); ?>'"><?php $custom_meta_text->the_value('btn'); ?></button>
+				<img src='<?php echo $sidebar_img; ?>' />
+				<p class='bc-slider-description'><?php the_content(); ?></p>
+				<button class='bc-slider-button' onclick="window.location.href='<?php echo $btn_url; ?>'"><?php echo $btn_txt; ?></button>
 			
 			</div><!-- end .bc-slider-sidebar .bc-slider-sidebar-<?php echo $count; ?> -->
 			
