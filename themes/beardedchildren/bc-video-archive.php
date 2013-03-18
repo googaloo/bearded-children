@@ -7,6 +7,7 @@
 <?php get_header(); ?>
 
 <h1>Channels</h1>
+<<<<<<< HEAD
 
 <div class='channel_container'>
 	
@@ -38,11 +39,17 @@
 
 $args = array( 'post_type' => 'bc-videos', 'posts_per_page' => 10 );
 $loop = new WP_Query( $args );
+=======
+>>>>>>> Fixing missing repo?
 
-if ( $loop->have_posts() ) : 
+<div class='channel_container'>
 	
-	while ( $loop->have_posts() ) : $loop->the_post(); ?>
+	<?php
+	$num_channels=wp_count_posts('bc-channel')->publish;
+	$args = array('post_type' => 'bc-channel');
+	$channel = get_posts($args);
 
+<<<<<<< HEAD
 		<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 		
 		<?php 
@@ -56,11 +63,36 @@ if ( $loop->have_posts() ) :
 		<p>Description: <?php echo $meta_descr; ?></p>
 		
 	<?php endwhile;
+=======
+	for($i=1; $i<=$num_channels; $i++): ?>
 
-endif; ?>
+		<h2><?php echo $channel[$i-1]->post_title; ?></h2>
+		<div><?php echo get_the_post_thumbnail($channel[$i-1]->ID, 'thumbnail'); ?></div>
+>>>>>>> Fixing missing repo?
 
+		<?php
+		$skits_loop = new WP_Query(array('post_type'=>'bc-videos'));
+		if($skits_loop->have_posts()) :
+
+<<<<<<< HEAD
 <?php wp_reset_query(); ?>
+=======
+			while($skits_loop->have_posts()) : $skits_loop->the_post(); ?>
 
+				<?php $channel_type = get_post_meta(get_the_id(), 'wpcf-channel', true) ?>
+
+				<?php if ( $channel_type == $channel[$i-1]->post_title ) { ?>
+					<h3 style='color: red;'> <?php the_title(); ?> </h3>
+				<?php } ?>
+
+			<?php endwhile; ?>
+
+		<?php endif; ?>
+>>>>>>> Fixing missing repo?
+
+	<?php endfor; ?>
+		
+</div><!-- end channel_container -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); 

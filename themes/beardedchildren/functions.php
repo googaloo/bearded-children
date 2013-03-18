@@ -92,9 +92,3 @@ function bc_slider_registration() {
 	);
 			
 }
-
-// Custom write panels for BC Slider //////////////////////////////////
-// using WP	Alchemy http://www.farinspace.com/wpalchemy-metabox/#download ////////////////
-
-include_once 'metaboxes/setup.php';
-include_once 'metaboxes/bc-slider-spec.php';
