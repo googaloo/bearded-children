@@ -44,6 +44,21 @@ root {
   top: 3px;
 }
 
+.channel-box {
+  width: 1024px;
+}
+
+.channel-logo {
+  float: left;
+}
+
+.channel-img {
+  float: right;
+  width: 633px;
+  height: 225px;
+  color: #FFF;
+}
+
 .home-content-slider {
   width: 890px;
   position: relative;

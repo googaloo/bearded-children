@@ -41,9 +41,9 @@
 	while ( $loop->have_posts() ) : $loop->the_post();
 
 		$main_img = get_post_meta ( get_the_id(), 'wpcf-main-image', true );
-		$sidebar_img = get_post_meta ( get_the_id(), 'wpcf-sidebar-img', true );
-		$btn_url = get_post_meta ( get_the_id(), 'wpcf-btn-url', true );
-		$btn_txt = get_post_meta ( get_the_id(), 'wpcf-btn-text', true );
+		$sidebar_img = get_post_meta ( get_the_id(), 'wpcf-slider-sidebar-img', true );
+		$btn_url = get_post_meta ( get_the_id(), 'wpcf-slider-btn-url', true );
+		$btn_txt = get_post_meta ( get_the_id(), 'wpcf-slider-btn-text', true );
 			
 ?>
 		<li>
