@@ -16,34 +16,39 @@
 	$channel = get_posts($args); 
 
 	for($i=0; $i<=$num_channels-1; $i++) :
-		print_r($channel[$i]->ID);
 		$images = get_children( array( 'post_parent' => $channel[$i]->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
 		if ( $images ) :
 			$image = array_shift( $images );
 			$channel_bg = wp_get_attachment_url( $image->ID );
 		endif; ?>
 
-		<h2><?php echo $channel[$i]->post_title; ?></h2> <?php //print_r($image); ?>
+		<h2><?php echo $channel[$i]->post_title; ?></h2>
 		<div class='channel-box'>
 			<div class='channel-logo'><?php echo get_the_post_thumbnail($channel[$i]->ID, 'large'); ?></div>
 			<div class='channel-img' style='background: url(<?php echo $channel_bg; ?>);'>This is where the cheese is made.</div><!-- end .channel-img <?php echo $i; ?> -->
-		</div><!-- end .channel-box -->
-
+		
 		<?php
-		$skits_loop = new WP_Query(array('post_type'=>'bc-videos'));
-		if($skits_loop->have_posts()) :
+		$videos_loop = new WP_Query(array('post_type'=>'bc-videos'));
+		if($videos_loop->have_posts()) :
 
-			while($skits_loop->have_posts()) : $skits_loop->the_post(); ?>
+			while($videos_loop->have_posts()) : $videos_loop->the_post(); ?>
 
-				<?php $channel_type = get_post_meta(get_the_id(), 'wpcf-channel', true) ?>
-
-				<?php if ( $channel_type == $channel[$i-1]->post_title ) { ?>
-					<h3 style='color: red;'> <?php the_title(); ?> </h3>
-				<?php } ?>
-
+				<?php $video_channel = get_post_meta(get_the_id(), 'wpcf-channel', true); ?>
+				<!-- <p><?php echo get_post_meta(get_the_id(), 'wpcf-channel', true); ?></p> -->
+				<?php $video_descr = get_post_meta(get_the_id(), 'wpcf-description', true); ?>
+				<div class='videos-box'>
+					<?php if ( $video_channel == $channel[$i-1]->post_title ) { ?>
+						<?php the_post_thumbnail('medium'); ?>
+						<h3 class='video-title'> <?php the_title(); ?> </h3> 
+						<p class='vid-descr'><?php echo $video_descr; ?></p>
+					<?php } ?>
+				</div><!-- end .videos-box -->
 			<?php endwhile; ?>
 
 		<?php endif; ?>
+		<?php wp_reset_query(); ?>
+
+		</div><!-- end .channel-box -->
 
 	<?php endfor; ?>
 		
