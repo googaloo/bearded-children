@@ -29,7 +29,6 @@
         
     </div>
 	
-	
     <div class='main-container'>
         
 	<div class='adbox adbox1'>
@@ -42,7 +41,7 @@
 	    
 		<div class='masthead'>
 
-		    <div class='logo-box'><a href='<?php site_url(); ?>'>Bearded Children</a></div>
+		    <div class='logo-box'><a href='<?php echo esc_attr( home_url() ); ?>'>Bearded Children</a></div>
 		    <nav class='main-nav'>
 		  <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 		    </nav>

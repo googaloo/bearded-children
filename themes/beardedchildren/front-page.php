@@ -28,25 +28,18 @@
 
 	<div class='beard-posts'>
 
-		<?php if ( have_posts() ) : ?>
+
 
 			<h2 class='beard-post-header'>As it Grows</h2>
 
 		<?php /* Start the Loop */ ?>
-		    <?php while ( have_posts() ) : the_post(); ?>
+		<?php $loop = wp_get_recent_posts(); ?>
 
-			<div <?php post_class(); ?>>
+		    <?php foreach ( $loop as $post ) : ?>
 
-				<?php the_title(); ?><br/>
-				<?php the_content(); ?>
+		    	<?php echo $post['post_title']; ?>
 
-			</div><!-- end -->
-
-		    <?php endwhile; ?>
-
-		<?php else: ?>
-
-		<?php endif; ?>
+		    <?php endforeach; ?>
 
 	</div><!-- end .beard-posts -->
 	
