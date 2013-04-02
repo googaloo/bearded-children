@@ -43,7 +43,7 @@
 
 		    <div class='logo-box'><a href='<?php echo esc_attr( home_url() ); ?>'>Bearded Children</a></div>
 		    <nav class='main-nav'>
-		  <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+		  		<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 		    </nav>
 		    <div class='search-bar-box'>
 

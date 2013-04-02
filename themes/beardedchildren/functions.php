@@ -14,11 +14,47 @@ function start_scripts() {
 // WIDGETS //
 ////////////////////////////////////////////////////////////////
 
-function bc_widgets_init() {
+// Whats New Tab
+class bc_whats_new extends WP_Widget {
+
+    function bc_whats_new() {
+
+        $widget_ops = array (
+
+            'classname' => 'Whats New Tabs',
+            'description' => 'Latest BC Content'
+
+            );
+
+        $control_ops = array(
+
+            'width' => 600,
+            'id_base' => 'bc_whats_new'
+
+            );
+
+        $this->WP_Widget('bc_whats_new', 'Whats New Tabs', $widget_ops, $control_ops);
+
+    }
+
+    function widget( $args, $instance ) {
+
+        extract ( $args );
+
+        $sort = $instance['sort'];
+
+
+    }
 
 }
 
-add_action('widgets_init', 'bc_widgets_init');
+// Add widgets
+add_action("widgets_init", "bc_load_widgets");  
+function bc_load_widgets() {
+
+    register_widget('bc_whats_new');
+
+}
 
 //////////////////////////////////////////////////////////////////
 // MENUS //
