@@ -47,5 +47,5 @@
 
 </div><!-- end .generic-content-container -->
 
-<?php get_sidebar(); ?>
+<?php dynamic_sidebar('whats_new'); ?>
 <?php get_footer(); 

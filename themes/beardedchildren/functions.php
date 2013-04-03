@@ -11,44 +11,76 @@ function start_scripts() {
 }
 
 //////////////////////////////////////////////////////////////////
+// SIDEBARS //
+////////////////////////////////////////////////////////////////
+
+register_sidebar ( array( 
+
+    'name' => 'Primary',
+    'id' => 'primary',
+    'description' => 'The main, plain vanilla sidebar',
+    'before_widget' => '<div class="primary-sidebar">',
+    'after_widget' => '</div>'
+
+    ));
+
+register_sidebar ( array(
+
+    'name' => 'What\'s New',
+    'id' => 'whats_new',
+    'description' => 'Sidebar for the What\'s new widget'
+
+    ));
+
+//////////////////////////////////////////////////////////////////
 // WIDGETS //
 ////////////////////////////////////////////////////////////////
 
 // Whats New Tab
 class bc_whats_new extends WP_Widget {
 
-    function bc_whats_new() {
+    function __construct() {
 
-        $widget_ops = array (
-
-            'classname' => 'Whats New Tabs',
-            'description' => 'Latest BC Content'
-
-            );
-
-        $control_ops = array(
-
-            'width' => 600,
-            'id_base' => 'bc_whats_new'
-
-            );
-
-        $this->WP_Widget('bc_whats_new', 'Whats New Tabs', $widget_ops, $control_ops);
+        parent::__construct('bc_whats_new', 'Whats New');
 
     }
 
-    function widget( $args, $instance ) {
+    function widget($args, $instance) {
 
-        extract ( $args );
+        extract($args);
 
-        $sort = $instance['sort'];
+        $title = $instance['title'];
 
+        echo $title;
+
+    }
+
+    function update($new_instance, $old_instance) {
+
+        $instance = $old_instance;
+
+        $instance['title'] = $new_instance['title'];
+
+        return $instance;
+
+    }
+
+    function form($instance) {
+
+        $title = $instance['title'];
+
+        ?>
+
+        <label for="<?php echo $this->get_field_id('title'); ?>">Widget Title</label>
+        <p><input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>"name="<?php echo $this->get_field_name('title'); ?>" /></p>
+
+        <?php 
 
     }
 
 }
 
-// Add widgets
+// Load widgets
 add_action("widgets_init", "bc_load_widgets");  
 function bc_load_widgets() {
 
@@ -62,7 +94,8 @@ function bc_load_widgets() {
 
 function register_my_menus() {
   register_nav_menus(
-    array( 'main-menu' => __( 'Main Menu' )
+    array( 
+        'main-menu' => __( 'Main Menu' )
     )
   );
 }
