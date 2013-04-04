@@ -8,6 +8,7 @@ add_action ( 'wp_enqueue_scripts', 'start_scripts' );
 function start_scripts() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('scrollto', get_template_directory_uri().'/js/jquery.scrollTo-1.4.3.1-min.js');
+    wp_enqueue_script('jquery-ui', 'http://code.jquery.com/ui/1.10.2/jquery-ui.js');
 }
 
 //////////////////////////////////////////////////////////////////
@@ -36,57 +37,7 @@ register_sidebar ( array(
 // WIDGETS //
 ////////////////////////////////////////////////////////////////
 
-// Whats New Tab
-class bc_whats_new extends WP_Widget {
 
-    function __construct() {
-
-        parent::__construct('bc_whats_new', 'Whats New');
-
-    }
-
-    function widget($args, $instance) {
-
-        extract($args);
-
-        $title = $instance['title'];
-
-        echo $title;
-
-    }
-
-    function update($new_instance, $old_instance) {
-
-        $instance = $old_instance;
-
-        $instance['title'] = $new_instance['title'];
-
-        return $instance;
-
-    }
-
-    function form($instance) {
-
-        $title = $instance['title'];
-
-        ?>
-
-        <label for="<?php echo $this->get_field_id('title'); ?>">Widget Title</label>
-        <p><input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>"name="<?php echo $this->get_field_name('title'); ?>" /></p>
-
-        <?php 
-
-    }
-
-}
-
-// Load widgets
-add_action("widgets_init", "bc_load_widgets");  
-function bc_load_widgets() {
-
-    register_widget('bc_whats_new');
-
-}
 
 //////////////////////////////////////////////////////////////////
 // MENUS //
@@ -130,4 +81,20 @@ function collect_email($email) {
     
     return $result;
                 
+}
+
+//////////////////////////////////////////////////////////////////
+// SHORT CODES //
+////////////////////////////////////////////////////////////////
+
+add_shortcode( 'whats_new', 'whats_new_shortcode' );
+
+function whats_new_shortcode() {
+
+    ob_start();
+    dynamic_sidebar('whats_new');
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+
 }
