@@ -49,12 +49,22 @@ class whats_new_widget extends WP_Widget {
 
 	        	<?php
 
-	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos') );
+	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
 	        	if ( $videos_loop->have_posts() ) : 
 
 	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
 
-	        			the_title();
+	        	?>
+	        			<div class="whats-new-single-container">
+
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
+	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
+	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
+
+	        			</div><!-- end .whats-new-single-container -->
+
+				<?php
 
 	        		endwhile;
 
@@ -70,13 +80,22 @@ class whats_new_widget extends WP_Widget {
 
 	        	<?php
 
-	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-lets-play') );
+	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-lets-play', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
 	        	if ( $videos_loop->have_posts() ) : 
 
 	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
 
-	        			the_title();
+	        	?>
+	        			<div class="whats-new-single-container">
 
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
+	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
+	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
+
+	        			</div><!-- end .whats-new-single-container -->
+
+				<?php
 	        		endwhile;
 
 	        	endif;
@@ -89,28 +108,13 @@ class whats_new_widget extends WP_Widget {
 
 	        <div id="tabs-3">
 
-	        	<?php
-
-	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-games') );
-	        	if ( $videos_loop->have_posts() ) : 
-
-	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
-
-	        			the_title();
-
-	        		endwhile;
-
-	        	endif;
-
-	        	wp_reset_query();
-
-	        	?>
+	        	<h3 class='whats-new-coming-soon'>Coming Soon... Well maybe...</h3>
 
 	        </div><!-- end #tabs-3 GAMES -->
 
 	        <div id="tabs-4">
 
-	        	<h3 class='whats-new-coming-soon'>Coming Soon... Well, maybe...</h3>
+	        	<h3 class='whats-new-coming-soon'>Coming Soon... Well maybe...</h3>
 
 	        </div><!-- end #tabs-4 COMICS -->
 
