@@ -11,8 +11,6 @@
 
 	<?php if ( have_posts() ) : ?>
 
-		<h2 class='beard-post-header'>As it Grows</h2>
-
 	<?php /* Start the Loop */ ?>
 		   <?php while ( have_posts() ) : the_post(); ?>
 

@@ -45,6 +45,8 @@
 	
 	<div class='adbox adbox2'></div>
 
+<?php dynamic_sidebar('home_new_tab'); ?>
+
 </div><!-- end .generic-content-container -->
 
 <?php get_sidebar(); ?>

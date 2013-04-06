@@ -38,7 +38,7 @@
 
 			while($videos_loop->have_posts()) : $videos_loop->the_post(); ?>
 
-				<?php $video_channel = get_post_meta(get_the_id(), 'wpcf-video-channel', true); ?> <?php // the channel // ?>
+				<?php $video_channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?> <?php // the channel // ?>
 				<?php $video_descr = get_post_meta(get_the_id(), 'wpcf-video-description', true); ?>
 				<div class='videos-box'>
 					<?php if ( $video_channel == $channel[$i]->post_title ) { ?> <?php // Check the Video channel and the channel // ?>

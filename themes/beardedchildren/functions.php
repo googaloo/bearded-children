@@ -25,11 +25,28 @@ register_sidebar ( array(
 
     ));
 
+// TABS
 register_sidebar ( array(
 
-    'name' => 'What\'s New',
-    'id' => 'whats_new',
-    'description' => 'Sidebar for the What\'s new widget'
+    'name' => 'Home New Tabs',
+    'id' => 'home_new_tab',
+    'description' => 'Sidebar for the Home Page What\'s new widget'
+
+    ));
+
+register_sidebar ( array(
+
+    'name' => 'Videos New Tabs',
+    'id' => 'videos_new_tab',
+    'description' => 'Sidebar for the Videos What\'s new widget'
+
+    ));
+
+register_sidebar ( array(
+
+    'name' => 'Beard Play New Tabs',
+    'id' => 'beard_play_new_tab',
+    'description' => 'Sidebar for the Beard Play What\'s new widget'
 
     ));
 
@@ -87,14 +104,55 @@ function collect_email($email) {
 // SHORT CODES //
 ////////////////////////////////////////////////////////////////
 
-add_shortcode( 'whats_new', 'whats_new_shortcode' );
+// The New Tabs
+add_shortcode( 'home_new_tab', 'home_new_shortcode' );
+add_shortcode( 'videos_new_tab', 'videos_new_shortcode' );
+add_shortcode( 'beard_play_new_tab', 'beard_play_new_shortcode' );
+add_shortcode( 'short_stories', 'display_short_stories' );
 
-function whats_new_shortcode() {
+function home_new_shortcode() {
 
     ob_start();
-    dynamic_sidebar('whats_new');
+    dynamic_sidebar('home_new_tab');
     $html = ob_get_contents();
     ob_end_clean();
     return $html;
+
+}
+
+function videos_new_shortcode() {
+
+    ob_start();
+    dynamic_sidebar('videos_new_tab');
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+
+}
+
+function beard_play_new_shortcode() {
+
+    ob_start();
+    dynamic_sidebar('beard_play_new_tab');
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+
+}
+
+function display_short_stories() {
+
+    $stories_loop = new WP_Query ( array('post_type' => 'post', 'category_name' => 'short-stories') );
+    if ( $stories_loop->have_posts() ) : 
+        while ( $stories_loop->have_posts() ) : $stories_loop->the_post(); ?>
+
+    <h2><?php the_title(); ?></h2>
+    <div><?php the_content(); ?></div>
+
+    <?php
+        endwhile;
+    endif;
+
+    wp_reset_query();
 
 }
