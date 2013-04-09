@@ -29,10 +29,13 @@ root {
 .main-container {
 	width: 1200px;
 	margin: 0 auto;
+
 }
 
 .content-container {
-	width:  890px;
+	width: $contWidth;
+	margin: 0 auto;
+	position: relative;
 }
 
 .search-btn {

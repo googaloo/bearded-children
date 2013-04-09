@@ -10,9 +10,9 @@
 ?>
 <?php 
 
-///////////////////////////////////////////////////////////////////////////////////
-// Home Widget - Displays all New in As the Beard Grows, Videos, Beard Play, etc //
-///////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Home Widget - Displays all New in As the Beard Grows, Videos, Beard Play, etc ///////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class home_new_widget extends WP_Widget {
 
@@ -32,25 +32,24 @@ class home_new_widget extends WP_Widget {
 
         	jQuery(document).ready(function() {
 
-        		jQuery('#tabs').tabs();
+        		jQuery('.home-tabs-container').tabs();
 
         	});
 
         </script>
 
-        <div class='whats-new-container' id='tabs'>
+        <div class='home-tabs-container'>
 
-	        <ul class='whats-new-nav'>
+	        <ul class='home-tabs-nav'>
 
-	        	<li class='whats-new-tab home-tabs'><a href="#tabs-1">AS THE BEARD GROWS</a></li>
-	        	<li class='whats-new-tab home-tabs'><a href="#tabs-2">VIDEOS</a></li>
-	        	<li class='whats-new-tab home-tabs'><a href="#tabs-3">GAMES</a></li>
-	        	<li class='whats-new-tab home-tabs'><a href="#tabs-4">BEARD PLAY</a></li>
-	        	<li class='whats-new-tab home-tabs'><a href="#tabs-5">SHORT STORIES</a></li>
+	        	<li class='home-tabs active-home-tab'><a href="#tabs-1"><div class='home-blog-tab tab-container'>AS THE BEARD GROWS</div></a></li>
+	        	<li class='home-tabs'><a href="#tabs-2"><div class='home-videos-tab tab-container'>VIDEOS</div></a></li>
+	        	<li class='home-tabs'><a href="#tabs-3"><div class='home-beard-play-tab tab-container'>BEARD PLAY</div></a></li>
+	        	<li class='home-tabs'><a href="#tabs-4"><div class='home-writing-tab tab-container'>SHORT STORIES</div></a></li>
 
 	        </ul>
 
-	        <div id="tabs-1">
+	        <div id="tabs-1" class='tabs'>
 
 	        	<?php
 
@@ -60,14 +59,14 @@ class home_new_widget extends WP_Widget {
 	        		while ( $home_growth_loop->have_posts() ) : $home_growth_loop->the_post();
 
 	        	?>
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 
 				<?php
 
@@ -81,7 +80,7 @@ class home_new_widget extends WP_Widget {
 
 	        </div><!-- end #tabs-1 AS THE BEARD GROWS -->
 
-	        <div id="tabs-2">
+	        <div id="tabs-2" class='tabs'>
 
 	        	<?php
 
@@ -91,14 +90,14 @@ class home_new_widget extends WP_Widget {
 	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
 
 	        	?>
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 
 				<?php
 	        		endwhile;
@@ -111,37 +110,7 @@ class home_new_widget extends WP_Widget {
 
 	        </div><!-- end #tabs-2 VIDEOS -->
 
-	        <div id="tabs-3">
-
-	        	<?php
-
-	        	$games_loop = new WP_Query ( array('post_type' => 'bc-beard-plays', 'category_name' => 'games', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
-	        	if ( $games_loop->have_posts() ) : 
-
-	        		while ( $games_loop->have_posts() ) : $games_loop->the_post();
-
-	        	?>
-	        			<div class="whats-new-single-container">
-
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
-	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
-	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
-
-	        			</div><!-- end .whats-new-single-container -->
-
-				<?php
-	        		endwhile;
-
-	        	endif;
-
-	        	wp_reset_query();
-
-	        	?>
-
-	        </div><!-- end #tabs-3 GAMES -->
-
-	        <div id="tabs-4">
+	        <div id="tabs-3" class='tabs'>
 
 	        	<?php
 
@@ -151,14 +120,14 @@ class home_new_widget extends WP_Widget {
 	        		while ( $beard_plays_loop->have_posts() ) : $beard_plays_loop->the_post();
 
 	        	?>
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 
 				<?php
 	        		endwhile;
@@ -171,13 +140,37 @@ class home_new_widget extends WP_Widget {
 
 	        </div><!-- end #tabs-4 BEARD PLAYS -->
 
-	    	<div id="tabs-5">
+	    	<div id="tabs-4" class='tabs'>
 
-	        	<h3 class='whats-new-coming-soon'>Short stories coming Soon... Well maybe...</h3>
+	        	<?php
 
-	        </div><!-- end #tabs-4 COMICS -->
+	        	$beard_plays_loop = new WP_Query ( array('post_type' => 'post', 'category_name' => 'short-stories', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
+	        	if ( $beard_plays_loop->have_posts() ) : 
 
-	     </div><!--end .whats-new-container -->
+	        		while ( $beard_plays_loop->have_posts() ) : $beard_plays_loop->the_post();
+
+	        	?>
+	        			<div class="tabs-single-container">
+
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
+	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
+	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
+
+	        			</div><!-- end .tabs-single-container -->
+
+				<?php
+	        		endwhile;
+
+	        	endif;
+
+	        	wp_reset_query();
+
+	        	?>
+
+	        </div><!-- end #tabs-4 SHORT STORIES -->
+
+	     </div><!--end .home-tabs-container -->
 
         <?php
 
@@ -185,9 +178,9 @@ class home_new_widget extends WP_Widget {
 
 }
 
-////////////////////////////////////////////////////
-// Videos New Widget - Displays all New in Videos //
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Videos New Widget - Displays all New in Videos ////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class videos_new_widget extends WP_Widget {
 
@@ -236,14 +229,14 @@ class videos_new_widget extends WP_Widget {
 	        	?>
 	        	<?php $channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?>
 	        	<?php if ( $channel == "Skits" ) : ?>
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 
 	        	<?php endif; ?>
 
@@ -273,14 +266,14 @@ class videos_new_widget extends WP_Widget {
 	        	<?php $channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?>
 	        	<?php if ( $channel == "Bits of 8" ) : ?>
 
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 	        	<?php endif; ?>
 
 				<?php
@@ -308,14 +301,14 @@ class videos_new_widget extends WP_Widget {
 	        	<?php $channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?>
 	        	<?php if ( $channel == "Recasts" ) : ?>
 
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 
 	        	<?php endif; ?>
 
@@ -347,14 +340,14 @@ class videos_new_widget extends WP_Widget {
 	        	<?php $channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?>
 	        	<?php if ( $channel == "Scifi" ) : ?>
 
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 
 	        	<?php elseif ( $executed != true ) : ?>
 
@@ -382,9 +375,9 @@ class videos_new_widget extends WP_Widget {
 
 }
 
-////////////////////////////////////////////////////////
-// Beard Play Widget - Displays all New in Beard Play //
-////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Beard Play Widget - Displays all New in Beard Play ////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 class beard_play_new_widget extends WP_Widget {
 
@@ -431,14 +424,14 @@ class beard_play_new_widget extends WP_Widget {
 	        		while ( $growth_loop->have_posts() ) : $growth_loop->the_post();
 
 	        	?>
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 
 				<?php
 
@@ -462,14 +455,14 @@ class beard_play_new_widget extends WP_Widget {
 	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
 
 	        	?>
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 
 				<?php
 	        		endwhile;
@@ -492,14 +485,14 @@ class beard_play_new_widget extends WP_Widget {
 	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
 
 	        	?>
-	        			<div class="whats-new-single-container">
+	        			<div class="tabs-single-container">
 
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
-	        			</div><!-- end .whats-new-single-container -->
+	        			</div><!-- end .tabs-single-container -->
 
 				<?php
 	        		endwhile;
@@ -512,7 +505,7 @@ class beard_play_new_widget extends WP_Widget {
 
 	        </div><!-- end #tabs-3 BEARD PLAY  -->
 
-	     </div><!--end .whats-new-container -->
+	     </div><!--end .tabs-singe-container -->
 
         <?php
 

@@ -9,6 +9,7 @@ function start_scripts() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('scrollto', get_template_directory_uri().'/js/jquery.scrollTo-1.4.3.1-min.js');
     wp_enqueue_script('jquery-ui', 'http://code.jquery.com/ui/1.10.2/jquery-ui.js');
+    wp_enqueue_script('site-scripts', get_template_directory_uri().'/js/scripts.js');
 }
 
 //////////////////////////////////////////////////////////////////

@@ -36,6 +36,8 @@ root {
 
 .content-container {
   width: 890px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .search-btn {
@@ -57,6 +59,62 @@ root {
   width: 633px;
   height: 225px;
   color: #FFF;
+}
+
+.social-box {
+  width: 90px;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-left: -545px;
+}
+
+.social-list {
+  list-style: none;
+}
+
+.social-item {
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+}
+
+.youtube {
+  background: url("images/icons/social/youtube_dark.png");
+}
+
+.youtube:hover {
+  background: url("images/icons/social/youtube_active.png");
+}
+
+.facebook {
+  background: url("images/icons/social/facebook_dark.png");
+}
+
+.facebook:hover {
+  background: url("images/icons/social/facebook_active.png");
+}
+
+.twitter {
+  background: url("images/icons/social/twitter02_dark.png");
+}
+
+.twitter:hover {
+  background: url("images/icons/social/twitter02_active.png");
+}
+
+.social-rss {
+  background: url("images/icons/social/rss_dark.png");
+}
+
+.social-rss:hover {
+  background: url("images/icons/social/rss_active.png");
+}
+
+.masthead {
+  width: 890px;
+  height: 185px;
+  background: #218ee8;
 }
 
 .home-content-slider {
@@ -164,4 +222,53 @@ root {
 
 .videos-box {
   width: 1032px;
+}
+
+.home-tabs-nav {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  border-bottom: 3px solid #218ee8;
+}
+
+.home-tabs {
+  float: left;
+  width: 25%;
+  height: 60px;
+  text-indent: -9999px;
+}
+
+.active-home-tab {
+  background: #218ee8;
+}
+
+.tab-container {
+  width: 65px;
+  height: 60px;
+  margin: 0 auto;
+  background-positon: center;
+}
+
+.home-blog-tab {
+  background: url("images/icons/blog_icon.png") no-repeat;
+  background-position: -65px;
+}
+
+.home-videos-tab {
+  background: url("images/icons/videos_icon.png") no-repeat;
+}
+
+.home-beard-play-tab {
+  background: url("images/icons/beard_play_icon.png") no-repeat;
+}
+
+.home-writing-tab {
+  background: url("images/icons/writing_icon.png") no-repeat;
+}
+
+.main-footer {
+  display: inline-block;
 }

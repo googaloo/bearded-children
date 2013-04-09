@@ -1,6 +1,7 @@
 <?php
 
 /* Template Name: BC Video Archive */
+/* !!! NOT USED ANYMORE DUE TO THE BC TABS WIDGET !!! */
 
 ?>
 

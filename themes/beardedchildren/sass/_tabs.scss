@@ -1,0 +1,47 @@
+.home-tabs-container {
+
+}
+
+.home-tabs-nav {
+	list-style: none;
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 60px;
+	border-bottom: 3px solid #218ee8;
+}
+
+.home-tabs {
+	float: left;
+	width: 25%; height: 60px;
+	text-indent: -9999px;
+}
+
+.active-home-tab {
+	background: #218ee8;
+}
+
+.tab-container {
+	width: 65px; height: 60px;
+	margin: 0 auto;
+	background-positon: center;
+}
+
+.home-blog-tab {
+	background: url('images/icons/blog_icon.png') no-repeat;
+	background-position: -65px;
+}
+
+.home-videos-tab {
+	background: url('images/icons/videos_icon.png') no-repeat;
+}
+
+.home-beard-play-tab {
+	background: url('images/icons/beard_play_icon.png') no-repeat;
+}
+
+.home-writing-tab {
+	background: url('images/icons/writing_icon.png') no-repeat;
+}
+
