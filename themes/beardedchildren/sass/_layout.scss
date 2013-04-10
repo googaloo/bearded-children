@@ -1,5 +1,6 @@
 
 /* CLEARFIX */
+
 .clearfix:after {
 	content: ".";
 	display: block;
@@ -35,7 +36,7 @@ root {
 .content-container {
 	width: $contWidth;
 	margin: 0 auto;
-	position: relative;
+
 }
 
 .search-btn {

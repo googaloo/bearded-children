@@ -9,23 +9,31 @@
 	margin: 0;
 	padding: 0;
 	height: 60px;
-	border-bottom: 3px solid #218ee8;
+	border-bottom: 3px solid $BCblue;
 }
 
 .home-tabs {
 	float: left;
 	width: 25%; height: 60px;
 	text-indent: -9999px;
+	//position: relative;
+}
+
+.inactive-home-tab {
+	background: #FFF;
+}
+
+.inactive-home-tab:hover {
+	background: #8cc1e5;
 }
 
 .active-home-tab {
-	background: #218ee8;
+	background: $BCblue;
 }
 
 .tab-container {
 	width: 65px; height: 60px;
 	margin: 0 auto;
-	background-positon: center;
 }
 
 .home-blog-tab {
@@ -45,3 +53,13 @@
 	background: url('images/icons/writing_icon.png') no-repeat;
 }
 
+.tabs-anchor {
+
+}
+
+#my-tooltip {
+	position: absolute;
+	background: red;
+	width: 150px; height: 135px;
+	z-index:9999;
+}

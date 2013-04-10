@@ -30,9 +30,10 @@ class home_new_widget extends WP_Widget {
 
         <script type='text/javascript'>
 
-        	jQuery(document).ready(function() {
+        	jQuery(document).ready(function($) {
 
-        		jQuery('.home-tabs-container').tabs();
+        		// Tabs
+        		$('.home-tabs-container').tabs();
 
         	});
 
@@ -42,10 +43,10 @@ class home_new_widget extends WP_Widget {
 
 	        <ul class='home-tabs-nav'>
 
-	        	<li class='home-tabs active-home-tab'><a href="#tabs-1"><div class='home-blog-tab tab-container'>AS THE BEARD GROWS</div></a></li>
-	        	<li class='home-tabs'><a href="#tabs-2"><div class='home-videos-tab tab-container'>VIDEOS</div></a></li>
-	        	<li class='home-tabs'><a href="#tabs-3"><div class='home-beard-play-tab tab-container'>BEARD PLAY</div></a></li>
-	        	<li class='home-tabs'><a href="#tabs-4"><div class='home-writing-tab tab-container'>SHORT STORIES</div></a></li>
+	        	<li class='home-tabs active-home-tab'><a href="#tabs-1" title="As the Beard Grows" rel="tooltip"><div class='home-blog-tab tab-container'>AS THE BEARD GROWS</div></a></li>
+	        	<li class='home-tabs inactive-home-tab'><a href="#tabs-2" title="Videos" rel="tooltip"><div class='home-videos-tab tab-container'>VIDEOS</div></a></li>
+	        	<li class='home-tabs inactive-home-tab'><a href="#tabs-3" title="Beard Play" rel="tooltip"><div class='home-beard-play-tab tab-container'>BEARD PLAY</div></a></li>
+	        	<li class='home-tabs inactive-home-tab'><a href="#tabs-4" title="Short Stories" rel="tooltip"><div class='home-writing-tab tab-container'>SHORT STORIES</div></a></li>
 
 	        </ul>
 
