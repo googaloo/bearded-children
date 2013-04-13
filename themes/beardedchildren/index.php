@@ -2,7 +2,7 @@
 
 /*
  * 
- * Description: What up, this is the BC TEMPALTE Y'AAALLLLL!!!
+ * Description: Template for Bearded Children
  * 
  */
 
@@ -29,6 +29,6 @@
 	<?php else: ?>
 
 	<?php endif; ?>
-
+CHHESE
 <?php get_sidebar(); ?>
 <?php get_footer(); 

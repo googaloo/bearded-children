@@ -24,11 +24,11 @@
         
 		<div class='adbox adbox1'>
 			
-			<div class='temp-ad-box' style='width: 150px; height: 225px; background: #CCC; float: right;'></div>
+			<div class='temp-ad-box'></div>
 			
 		</div>
 		    
-		<div class='content-container'>
+		<div class='content-container clearfix'>
 
 			<div class='social-box'>
         
@@ -44,12 +44,6 @@
 			<div class='masthead'>
 
 			    <div class='logo-box'><a href='<?php echo esc_attr( home_url() ); ?>'>Bearded Children</a></div>
-			    
-			    <?php if ( !is_front_page() ): ?>
-				    <nav class='main-nav'>
-				  		<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-				    </nav>
-				<?php endif; ?>
 
 			    <div class='search-bar-box'>
 
@@ -58,3 +52,9 @@
 			    </div><!-- end search-bar-box -->
 
 			</div><!-- end masthead -->
+
+			<?php if ( !is_front_page() ): ?>
+				    <nav class='main-nav'>
+				  		<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+				    </nav>
+				<?php endif; ?>

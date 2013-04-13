@@ -1,9 +1,18 @@
+.adbox {
+	position: fixed;
+	width: 150px; height: 225px;
+	top: 150px;
+	left: 50%;
+	margin-left: $contWidth - 400;
+	background: #CCC;
+}
+
 .social-box {
 	width: 90px;
 	position: fixed;
 	top: 150px;
 	left: 50%;
-	margin-left: -545px;
+	margin-left: -$contWidth + 325;
 }
 
 .social-list {
@@ -13,6 +22,7 @@
 .social-item {
 	text-indent: -9999px;
 	width: 32px; height: 32px;
+	margin-top: 10px;
 }
 
 .youtube {
@@ -53,6 +63,22 @@
 	background: $BCblue;
 }
 
-.logo-box {
+#menu-main-menu {
+	list-style: none;
+	width: 100%;
+	float: left;
+	margin: 0 auto;
+	font-size: 1.25em;
+	padding: 0;
+	border-bottom: 4px solid $BCblue;
+}
 
+#menu-main-menu li {
+	float: left;
+	margin-left: 20px;
+	padding: 10px;
+}
+
+#menu-main-menu li:first-child {
+	margin-left: 0;
 }

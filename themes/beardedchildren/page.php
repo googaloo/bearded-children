@@ -16,7 +16,7 @@
 
 		<div <?php post_class(); ?>>
 
-			<?php the_title(); ?><br/>
+			<h2 class="single-header"><?php the_title(); ?></h2>
 			<?php the_content(); ?>
 
 		</div><!-- end -->
@@ -27,6 +27,11 @@
 
 	<?php endif; ?>
 
+	<div class='primary-sidebar-container'>
+
+		<?php dynamic_sidebar('primary'); ?>
+			
+	</div><!-- end .primary-sidebar-container -->
 
 <?php
 	get_sidebar();

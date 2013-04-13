@@ -11,8 +11,6 @@ jQuery(document).ready(function($) {
 
 	});
 
-
-
 	// TOOLTIP
 
 	$('a[rel=tooltip]').mouseover(function(e) {
@@ -25,7 +23,6 @@ jQuery(document).ready(function($) {
 
 		// Append the div to the element
 		$(this).parent().parent().append('<div id="my-tooltip">' + tip + '</div>');
-		console.log(tip);
 		// Set X and Y of tooltip
 		$('#tooltip').css('top', e.pageY + 10);
         $('#tooltip').css('left', e.pageX + 10);
@@ -46,6 +43,4 @@ jQuery(document).ready(function($) {
 
 	});
 
-
- 
 });

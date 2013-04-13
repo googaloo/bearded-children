@@ -1,27 +1,18 @@
 body {
-  font-family: arial;
+  font-family: arial, sans serif;
+  font-size: 16px;
+  line-height: 18px;
 }
 
-/* CLEARFIX */
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
+a {
+  color: #FF9C14;
+  font-family: arial, sans serif;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.clearfix {
-  display: inline-block;
-}
-
-html[xmlns] .clearfix {
-  display: block;
-}
-
-* html .clearfix {
-  height: 1%;
+a:hover {
+  color: #ffbe65;
 }
 
 /* LAYOUT */
@@ -30,13 +21,13 @@ root {
 }
 
 .main-container {
-  width: 1200px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .content-container {
   width: 890px;
   margin: 0 auto;
+  text-align: left;
 }
 
 .search-btn {
@@ -60,12 +51,27 @@ root {
   color: #FFF;
 }
 
+.primary-sidebar-container {
+  width: 267px;
+  float: right;
+}
+
+.adbox {
+  position: fixed;
+  width: 150px;
+  height: 225px;
+  top: 150px;
+  left: 50%;
+  margin-left: 490px;
+  background: #CCC;
+}
+
 .social-box {
   width: 90px;
   position: fixed;
   top: 150px;
   left: 50%;
-  margin-left: -545px;
+  margin-left: -565px;
 }
 
 .social-list {
@@ -76,6 +82,7 @@ root {
   text-indent: -9999px;
   width: 32px;
   height: 32px;
+  margin-top: 10px;
 }
 
 .youtube {
@@ -114,6 +121,26 @@ root {
   width: 890px;
   height: 185px;
   background: #218ee8;
+}
+
+#menu-main-menu {
+  list-style: none;
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+  font-size: 1.25em;
+  padding: 0;
+  border-bottom: 4px solid #218ee8;
+}
+
+#menu-main-menu li {
+  float: left;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+#menu-main-menu li:first-child {
+  margin-left: 0;
 }
 
 .home-content-slider {
@@ -197,6 +224,8 @@ root {
   cursor: hand;
   margin-left: 20px;
   font-size: 1.5em;
+  text-shadow: 1px 1px 1px #666666;
+  filter: dropshadow(color=#666666, offx=1, offy=1);
 }
 
 .channel-container {
@@ -277,12 +306,32 @@ root {
 
 #my-tooltip {
   position: absolute;
-  background: red;
-  width: 150px;
-  height: 135px;
+  color: #DDD;
+  font-size: 1.5em;
   z-index: 9999;
+  text-shadow: 2px 2px 2px #3f3f3f;
+  filter: dropshadow(color=#3f3f3f, offx=2, offy=2);
+}
+
+.tabs-single-container {
+  width: 578.5px;
+  float: left;
+}
+
+.tabs {
+  width: 100%;
+  float: left;
+  margin-right: -267px;
+}
+
+.single-container {
+  width: 578.5px;
+  float: left;
+  margin-right: -30%;
 }
 
 .main-footer {
+  width: 890px;
   display: inline-block;
+  background: aqua;
 }

@@ -62,10 +62,11 @@ class home_new_widget extends WP_Widget {
 	        	?>
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
-	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<h3 class="home-tab-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="home-tab-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
+	        				<?php the_excerpt(); ?>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
-	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
+	        				<span class="home-tab-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
 
 	        			</div><!-- end .tabs-single-container -->
 
@@ -170,6 +171,12 @@ class home_new_widget extends WP_Widget {
 	        	?>
 
 	        </div><!-- end #tabs-4 SHORT STORIES -->
+
+	        <div class='primary-sidebar-container'>
+
+	        	<?php dynamic_sidebar('primary'); ?>
+			
+			</div><!-- end .primary-sidebar-container -->
 
 	     </div><!--end .home-tabs-container -->
 
@@ -368,6 +375,8 @@ class videos_new_widget extends WP_Widget {
 
 	        </div><!-- end #tabs-4 Scifi -->
 
+	        <?php dynamic_sidebar('primary'); ?>
+
 	     </div><!--end .whats-new-container -->
 
         <?php
@@ -506,7 +515,9 @@ class beard_play_new_widget extends WP_Widget {
 
 	        </div><!-- end #tabs-3 BEARD PLAY  -->
 
-	     </div><!--end .tabs-singe-container -->
+	        <?php dynamic_sidebar('primary'); ?>
+
+	     </div><!--end .whats-new-container -->
 
         <?php
 

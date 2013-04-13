@@ -8,20 +8,36 @@
 	get_header();
 ?>
 
-<?php if ( have_posts() ) : ?>
+<div class="single-container">
 
-	<?php while ( have_posts() ) :  the_post(); ?>
+	<?php if ( have_posts() ) : ?>
 
-		<div <?php post_class(); ?>>
+		<?php while ( have_posts() ) :  the_post(); ?>
 
-			<?php the_title(); ?>
-			<?php the_content(); ?>
+			<div <?php post_class(); ?>>
 
-		</div>
+				<h2 class="single-header"><?php the_title(); ?></h2>
+				<div class="single-content-container"><?php the_content(); ?></div><!-- end .single-content-container -->
 
-	<?php endwhile; ?>
+			</div>
 
-<?php endif; ?>
+		<?php endwhile; ?>
+
+	<?php endif; ?>
+
+			<div class="comment-form">
+
+				<?php comments_template(); ?>
+
+			</div><!-- end .comments-container -->
+
+</div><!-- end .single-container -->
+
+<div class='primary-sidebar-container'>
+
+	<?php dynamic_sidebar('primary'); ?>
+			
+</div><!-- end .primary-sidebar-container -->
 
 <?php
 	get_sidebar();

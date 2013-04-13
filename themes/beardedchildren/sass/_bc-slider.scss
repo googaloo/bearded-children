@@ -68,5 +68,7 @@
   cursor: hand;
   margin-left: 20px; 
   font-size: 1.5em;
-  }
+  text-shadow: 1px 1px 1px #666666;
+  filter: dropshadow(color=#666666, offx=1, offy=1);
+}
  

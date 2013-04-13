@@ -1,42 +1,17 @@
 
-/* CLEARFIX */
-
-.clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
- 
-.clearfix {
-	display: inline-block;
-}
- 
-html[xmlns] .clearfix {
-	display: block;
-}
- 
-* html .clearfix {
-	height: 1%;
-}
-
 /* LAYOUT */
 root { 
 	display: block;
 }
 
 .main-container {
-	width: 1200px;
-	margin: 0 auto;
-
+	text-align: center;
 }
 
 .content-container {
 	width: $contWidth;
 	margin: 0 auto;
-
+	text-align: left;
 }
 
 .search-btn {
@@ -44,15 +19,27 @@ root {
 	left: -28px;
 	top: 3px;
 }
+
 .channel-box {
 	width: $fullWidth;
 }
+
 .channel-logo {
 	float: left;
 }
+
 .channel-img {
 	float: right;
 	width: 633px;
 	height: 225px;
 	color: #FFF;
+}
+
+.primary-sidebar-container {
+	width: $contWidth * 0.3;
+	float: right;
+}
+
+.primary-sidebar {
+
 }
