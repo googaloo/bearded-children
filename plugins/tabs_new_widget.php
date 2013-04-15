@@ -65,8 +65,6 @@ class home_new_widget extends WP_Widget {
 	        				<h3 class="home-tab-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<div class="home-tab-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<?php the_excerpt(); ?>
-	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
-	        				<span class="home-tab-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
 
 	        			</div><!-- end .tabs-single-container -->
 
@@ -94,8 +92,8 @@ class home_new_widget extends WP_Widget {
 	        	?>
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
@@ -124,8 +122,8 @@ class home_new_widget extends WP_Widget {
 	        	?>
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
@@ -154,8 +152,8 @@ class home_new_widget extends WP_Widget {
 	        	?>
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
@@ -239,8 +237,8 @@ class videos_new_widget extends WP_Widget {
 	        	<?php if ( $channel == "Skits" ) : ?>
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
 
@@ -276,8 +274,8 @@ class videos_new_widget extends WP_Widget {
 
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
@@ -311,8 +309,8 @@ class videos_new_widget extends WP_Widget {
 
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
@@ -350,8 +348,8 @@ class videos_new_widget extends WP_Widget {
 
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
@@ -373,11 +371,9 @@ class videos_new_widget extends WP_Widget {
 
 	        	?>
 
-	        </div><!-- end #tabs-4 Scifi -->
+	        </div>
 
-	        <?php dynamic_sidebar('primary'); ?>
-
-	     </div><!--end .whats-new-container -->
+	    </div>
 
         <?php
 
@@ -436,8 +432,8 @@ class beard_play_new_widget extends WP_Widget {
 	        	?>
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
 
@@ -467,8 +463,8 @@ class beard_play_new_widget extends WP_Widget {
 	        	?>
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>	        				
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
@@ -497,8 +493,8 @@ class beard_play_new_widget extends WP_Widget {
 	        	?>
 	        			<div class="tabs-single-container">
 
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 

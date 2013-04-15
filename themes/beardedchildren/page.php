@@ -16,8 +16,11 @@
 
 		<div <?php post_class(); ?>>
 
-			<h2 class="single-header"><?php the_title(); ?></h2>
-			<?php the_content(); ?>
+			<div class="page-content">
+
+				<?php the_content(); ?>
+
+			</div><!-- end page-content -->
 
 		</div><!-- end -->
 

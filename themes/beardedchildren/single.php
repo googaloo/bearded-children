@@ -17,6 +17,7 @@
 			<div <?php post_class(); ?>>
 
 				<h2 class="single-header"><?php the_title(); ?></h2>
+				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
 				<div class="single-content-container"><?php the_content(); ?></div><!-- end .single-content-container -->
 
 			</div>

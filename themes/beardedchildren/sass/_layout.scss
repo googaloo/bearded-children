@@ -40,6 +40,18 @@ root {
 	float: right;
 }
 
-.primary-sidebar {
+.wp-post-image {
+	width: 100%; height: 100%;
+}
 
+.page-content, .whats-new-container, .post-31 {
+	width: $contWidth * 0.65;
+	float: left;
+	display: block;
+}
+
+.single-container, .page-single-container {
+	width: $contWidth * 0.65;
+	float: left;
+	margin-right: -30%;
 }
