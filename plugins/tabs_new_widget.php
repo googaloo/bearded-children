@@ -52,6 +52,8 @@ class home_new_widget extends WP_Widget {
 
 	        <div id="tabs-1" class='tabs'>
 
+	        	<div class='more-box'><a href='index.php?page_id=27'>MORE <img src="<?php bloginfo('template_directory'); ?>/images/buttons/more-btn.jpg" alt="More button" /></a></div>
+
 	        	<?php
 
 	        	$home_growth_loop = new WP_Query ( array('post_type' => 'post', 'category_name' => 'as-the-beard-grows', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
@@ -78,9 +80,13 @@ class home_new_widget extends WP_Widget {
 
 	        	?>
 
+	        	<div class='more-box'><a href='index.php?page_id=27'>MORE <img src="<?php bloginfo('template_directory'); ?>/images/buttons/more-btn.jpg" alt="More button" /></a></div>
+
 	        </div><!-- end #tabs-1 AS THE BEARD GROWS -->
 
 	        <div id="tabs-2" class='tabs'>
+
+	        	<div class='more-box'><a href='index.php?page_id=151'>MORE <img src="<?php bloginfo('template_directory'); ?>/images/buttons/more-btn.jpg" alt="More button" /></a></div>
 
 	        	<?php
 
@@ -108,9 +114,13 @@ class home_new_widget extends WP_Widget {
 
 	        	?>
 
+	        	<div class='more-box'><a href='index.php?page_id=151'>MORE <img src="<?php bloginfo('template_directory'); ?>/images/buttons/more-btn.jpg" alt="More button" /></a></div>
+
 	        </div><!-- end #tabs-2 VIDEOS -->
 
 	        <div id="tabs-3" class='tabs'>
+
+	        	<div class='more-box'><a href='index.php?page_id=153'>MORE <img src="<?php bloginfo('template_directory'); ?>/images/buttons/more-btn.jpg" alt="More button" /></a></div>
 
 	        	<?php
 
@@ -138,9 +148,13 @@ class home_new_widget extends WP_Widget {
 
 	        	?>
 
+	        	<div class='more-box'><a href='index.php?page_id=153'>MORE <img src="<?php bloginfo('template_directory'); ?>/images/buttons/more-btn.jpg" alt="More button" /></a></div>
+
 	        </div><!-- end #tabs-4 BEARD PLAYS -->
 
 	    	<div id="tabs-4" class='tabs'>
+
+	    		<div class='more-box'><a href='index.php?page_id=299'>MORE <img src="<?php bloginfo('template_directory'); ?>/images/buttons/more-btn.jpg" alt="More button" /></a></div>
 
 	        	<?php
 
@@ -167,6 +181,8 @@ class home_new_widget extends WP_Widget {
 	        	wp_reset_query();
 
 	        	?>
+
+	        	<div class='more-box'><a href='index.php?page_id=299'>MORE <img src="<?php bloginfo('template_directory'); ?>/images/buttons/more-btn.jpg" alt="More button" /></a></div>
 
 	        </div><!-- end #tabs-4 SHORT STORIES -->
 
@@ -228,6 +244,7 @@ class videos_new_widget extends WP_Widget {
 	        	<?php
 
 	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
+
 	        	if ( $videos_loop->have_posts() ) : 
 
 	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
@@ -235,6 +252,7 @@ class videos_new_widget extends WP_Widget {
 	        	?>
 	        	<?php $channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?>
 	        	<?php if ( $channel == "Skits" ) : ?>
+
 	        			<div class="tabs-single-container">
 
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -371,9 +389,9 @@ class videos_new_widget extends WP_Widget {
 
 	        	?>
 
-	        </div>
+	        </div><!-- end #tabs-4 Scifi -->
 
-	    </div>
+	    </div><!-- end .whats-new-container #tabs -->
 
         <?php
 
@@ -509,11 +527,9 @@ class beard_play_new_widget extends WP_Widget {
 
 	        	?>
 
-	        </div><!-- end #tabs-3 BEARD PLAY  -->
+	        </div><!-- end #tabs-3 -->
 
-	        <?php dynamic_sidebar('primary'); ?>
-
-	     </div><!--end .whats-new-container -->
+	    </div><!-- end .whats-new-container #tabs -->
 
         <?php
 
