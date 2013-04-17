@@ -26,10 +26,8 @@
 
 		   <?php endwhile; ?>
 
-	<?php else: ?>
-
 	<?php endif; ?>
-
+	
 	<div class='primary-sidebar-container'>
 
 		<?php dynamic_sidebar('primary'); ?>

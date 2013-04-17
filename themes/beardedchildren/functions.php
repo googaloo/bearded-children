@@ -110,8 +110,6 @@ function collect_email($email) {
 add_shortcode( 'home_new_tab', 'home_new_shortcode' );
 add_shortcode( 'videos_new_tab', 'videos_new_shortcode' );
 add_shortcode( 'beard_play_new_tab', 'beard_play_new_shortcode' );
-add_shortcode( 'short_stories', 'display_short_stories' );
-add_shortcode( 'beard_grows', 'display_beard_grows' );
 
 function home_new_shortcode() {
 
@@ -141,48 +139,6 @@ function beard_play_new_shortcode() {
     ob_end_clean();
     return $html;
 
-}
-
-function display_short_stories() {
-
-    $stories_loop = new WP_Query ( array('post_type' => 'post', 'category_name' => 'short-stories') );
-    if ( $stories_loop->have_posts() ) : 
-        while ( $stories_loop->have_posts() ) : $stories_loop->the_post(); ?>
-
-    <div class='page-single-container'>
-
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
-        <div><?php the_content(); ?></div>
-
-    </div><!-- end .page-single-container -->
-
-    <?php
-        endwhile;
-    endif;
-
-    wp_reset_query();
-
-}
-
-function display_beard_grows() {
-    $beard_loop = new WP_Query ( array('post_type' => 'post', 'category_name' => 'as-the-beard-grows') );
-    if ( $beard_loop->have_posts() ) : 
-        while ( $beard_loop->have_posts() ) : $beard_loop->the_post(); ?>
-
-    <div class='page-single-container'>
-
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
-        <div><?php the_excerpt(); ?></div>
-
-    </div><!-- end .page-single-container -->
-
-    <?php
-        endwhile;
-    endif;
-
-    wp_reset_query();
 }
 
 //////////////////////////////////////////////////////////////////
