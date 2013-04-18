@@ -186,13 +186,16 @@ class home_new_widget extends WP_Widget {
 
 	        </div><!-- end #tabs-4 SHORT STORIES -->
 
+			
+
+	     </div><!--end .home-tabs-container -->
+
+
 	        <div class='primary-sidebar-container'>
 
 	        	<?php dynamic_sidebar('primary'); ?>
 			
 			</div><!-- end .primary-sidebar-container -->
-
-	     </div><!--end .home-tabs-container -->
 
         <?php
 
@@ -280,15 +283,12 @@ class videos_new_widget extends WP_Widget {
 
 	        	<?php
 
-	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
+	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC', 'meta_key' => 'wpcf-videos-channel', 'meta_value' => 'Bits of 8') );
 	        	if ( $videos_loop->have_posts() ) : 
 
 	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
 
 	        	?>
-
-	        	<?php $channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?>
-	        	<?php if ( $channel == "Bits of 8" ) : ?>
 
 	        			<div class="tabs-single-container">
 
@@ -298,7 +298,7 @@ class videos_new_widget extends WP_Widget {
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
 	        			</div><!-- end .tabs-single-container -->
-	        	<?php endif; ?>
+
 
 				<?php
 	        		endwhile;
@@ -315,26 +315,21 @@ class videos_new_widget extends WP_Widget {
 
 	        	<?php
 
-	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
+	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC', 'meta_key' => 'wpcf-videos-channel', 'meta_value' => 'Recasts') );
 	        	if ( $videos_loop->have_posts() ) : 
 
 	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
 
 	        	?>
 
-	        	<?php $channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?>
-	        	<?php if ( $channel == "Recasts" ) : ?>
+        			<div class="tabs-single-container">
 
-	        			<div class="tabs-single-container">
+        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
+        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
+        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
-	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
-	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
-	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
-
-	        			</div><!-- end .tabs-single-container -->
-
-	        	<?php endif; ?>
+        			</div><!-- end .tabs-single-container -->
 
 				<?php
 	        		endwhile;
@@ -354,36 +349,32 @@ class videos_new_widget extends WP_Widget {
 
 	        	$executed = false;
 
-	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
+	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC', 'meta_key' => 'wpcf-videos-channel', 'meta_value' => 'Scifi') );
 	        	if ( $videos_loop->have_posts() ) : 
 
 	        		while ( $videos_loop->have_posts() ) : $videos_loop->the_post();
 
 	        	?>
 
-	        	<?php $channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?>
-	        	<?php if ( $channel == "Scifi" ) : ?>
+        			<div class="tabs-single-container">
 
-	        			<div class="tabs-single-container">
+        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
+        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
+        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
-	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
-	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
-	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
+        			</div><!-- end .tabs-single-container -->
 
-	        			</div><!-- end .tabs-single-container -->
-
-	        	<?php elseif ( $executed != true ) : ?>
-
-	        		<h3 class='whats-new-coming-soon'>Coming Soon... Well maybe...</h3>
-	        		<?php $executed = true; ?>
-
-	        	<?php endif; ?>
+	        		
 
 				<?php
 	        		endwhile;
 
-	        	endif;
+	        	endif; ?>
+
+	        	<h3 class='whats-new-coming-soon'>Coming Soon... Well maybe...</h3>
+
+	        	<?php
 
 	        	wp_reset_query();
 

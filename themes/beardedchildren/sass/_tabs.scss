@@ -67,7 +67,7 @@
 }
 
 .tabs {
-	width: 100%;
+	width: $contWidth * 0.65;
 	float: left;
 	margin-right: -$contWidth * 0.3;
 }

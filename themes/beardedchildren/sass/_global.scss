@@ -5,12 +5,12 @@ body {
 }
 
 a {
-	color: #FF9C14;
+	color: $linkBlue;
 	font-family: arial, sans serif;
 	font-weight: bold;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #ffbe65;
+	color: $hoverLinkBlue;
 }

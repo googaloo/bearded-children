@@ -60,9 +60,22 @@ root {
 	font-size: 1.25em;
 	color: $BCblue;
 	float: right;
+	padding: 20px;
+}
+
+.more-box a {
+
+	color: $BCorange;
+
+}
+
+.more-box a:hover {
+
+	color: $lightBCorange;
+
 }
 
 .more-box img {
-	margin: 10px 0 0 10px;
-	float: left;
+	margin: -21px 0 0 15px;
+	float: right;
 }

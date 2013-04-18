@@ -5,14 +5,14 @@ body {
 }
 
 a {
-  color: #FF9C14;
+  color: #57acf3;
   font-family: arial, sans serif;
   font-weight: bold;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ffbe65;
+  color: #81bff3;
 }
 
 /* LAYOUT */
@@ -77,11 +77,20 @@ root {
   font-size: 1.25em;
   color: #218ee8;
   float: right;
+  padding: 20px;
+}
+
+.more-box a {
+  color: #ff9c14;
+}
+
+.more-box a:hover {
+  color: #ffbe65;
 }
 
 .more-box img {
-  margin: 10px 0 0 10px;
-  float: left;
+  margin: -21px 0 0 15px;
+  float: right;
 }
 
 .adbox {
@@ -347,7 +356,7 @@ root {
 }
 
 .tabs {
-  width: 100%;
+  width: 578.5px;
   float: left;
   margin-right: -267px;
 }
