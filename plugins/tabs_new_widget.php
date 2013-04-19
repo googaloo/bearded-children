@@ -246,7 +246,7 @@ class videos_new_widget extends WP_Widget {
 
 	        	<?php
 
-	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
+	        	$videos_loop = new WP_Query ( array('post_type' => 'bc-videos', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC', 'meta_key' => 'wpcf-videos-channel', 'meta_value' => 'Skits') );
 
 	        	if ( $videos_loop->have_posts() ) : 
 
@@ -254,7 +254,6 @@ class videos_new_widget extends WP_Widget {
 
 	        	?>
 	        	<?php $channel = get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?>
-	        	<?php if ( $channel == "Skits" ) : ?>
 
 	        			<div class="tabs-single-container">
 
@@ -264,8 +263,6 @@ class videos_new_widget extends WP_Widget {
 	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
 
 	        			</div><!-- end .tabs-single-container -->
-
-	        	<?php endif; ?>
 
 				<?php
 
