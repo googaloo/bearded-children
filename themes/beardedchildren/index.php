@@ -29,6 +29,6 @@
 	<?php else: ?>
 
 	<?php endif; ?>
-CHHESE
+THIS IS INDEX
 <?php get_sidebar(); ?>
 <?php get_footer(); 

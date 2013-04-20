@@ -1,7 +1,7 @@
 body {
   font-family: arial, sans serif;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 24px;
 }
 
 a {
@@ -73,24 +73,58 @@ root {
   margin-right: -30%;
 }
 
-.more-box {
+.more-box-bottom, .more-box-top {
   font-size: 1.25em;
-  color: #218ee8;
   float: right;
-  padding: 20px;
+  padding: 8px;
+  background: #ff9c14;
 }
 
-.more-box a {
-  color: #ff9c14;
+.more-box-top {
+  margin-top: -23px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
 }
 
-.more-box a:hover {
-  color: #ffbe65;
+.more-box-bottom {
+  margin-top: 23px;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 5px 5px;
 }
 
-.more-box img {
-  margin: -21px 0 0 15px;
-  float: right;
+.more-box-top:hover, .more-box-bottom:hover {
+  background: #ffbe65;
+}
+
+.more-box-top a, .more-box-bottom a {
+  color: #FFF;
+}
+
+.date-and-author-box {
+  color: #a9a9a9;
+  font-size: .8em;
+  width: 100%;
+  margin-top: -15px;
+  padding-bottom: 35px;
+}
+
+.date-and-author-box a {
+  color: #57acf3;
+}
+
+.date-and-author-box a:hover {
+  color: #81bff3;
+}
+
+.head-date, .head-author {
+  font-style: italic;
+  font-weight: bold;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.head-date {
+  color: #515151;
 }
 
 .adbox {
@@ -353,6 +387,8 @@ root {
 .tabs-single-container {
   width: 578.5px;
   float: left;
+  border-bottom: 2px solid #218ee8;
+  padding-bottom: 50px;
 }
 
 .tabs {
@@ -361,7 +397,14 @@ root {
   margin-right: -267px;
 }
 
+.tabs-header {
+  color: #ff9c14;
+  border-bottom: 5px solid #ff9c14;
+  font-size: 1.75em;
+}
+
 .main-footer {
+  margin-top: 150px;
   width: 890px;
   display: inline-block;
   background: aqua;

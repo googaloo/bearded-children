@@ -1,5 +1,5 @@
 .home-tabs-container {
-
+	
 }
 
 .home-tabs-nav {
@@ -64,10 +64,18 @@
 .tabs-single-container {
 	width: $contWidth * 0.65;
 	float: left;
+	border-bottom: 2px solid $BCblue;
+	padding-bottom: 50px;
 }
 
 .tabs {
 	width: $contWidth * 0.65;
 	float: left;
 	margin-right: -$contWidth * 0.3;
+}
+
+.tabs-header {
+	color: $BCorange;
+	border-bottom: 5px solid $BCorange;
+	font-size: 1.75em;
 }

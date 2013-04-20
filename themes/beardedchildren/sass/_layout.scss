@@ -56,26 +56,58 @@ root {
 	margin-right: -30%;
 }
 
-.more-box {
+.more-box-bottom, .more-box-top {
 	font-size: 1.25em;
-	color: $BCblue;
 	float: right;
-	padding: 20px;
+	padding: 8px;
+	background: $BCorange;
 }
 
-.more-box a {
+.more-box-top {
+	margin-top: -23px;
+	-webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
 
-	color: $BCorange;
+.more-box-bottom {
+	margin-top: 23px;
+	-webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.more-box-top:hover, .more-box-bottom:hover {
+	background: $lightBCorange;
+}
+
+.more-box-top a, .more-box-bottom a {
+
+	color: #FFF;
 
 }
 
-.more-box a:hover {
-
-	color: $lightBCorange;
-
+.date-and-author-box {
+	color: #a9a9a9;
+	font-size: .8em;
+	width: 100%;
+	margin-top: -15px;
+	padding-bottom: 35px;
 }
 
-.more-box img {
-	margin: -21px 0 0 15px;
-	float: right;
+.date-and-author-box a {
+	color: $linkBlue;
+}
+
+.date-and-author-box a:hover {
+	color: $hoverLinkBlue;
+}
+
+.head-date, .head-author {
+	font-style: italic;
+	font-weight: bold;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+.head-date {
+	color: #515151;
 }

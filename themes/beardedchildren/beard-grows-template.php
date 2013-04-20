@@ -24,6 +24,7 @@
         while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <div class="date-and-author-box">Date: <span class="head-date"><?php the_time('Y-m-d'); ?></span>Author: <a href="<?php the_author_link(); ?>"><span class="head-author"><?php the_author(); ?></span></a></div>
         <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a></div>
         <div><?php the_excerpt(); ?></div>
 
