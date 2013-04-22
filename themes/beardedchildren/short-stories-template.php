@@ -16,7 +16,7 @@
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; 
     
     $wp_query = new WP_Query ();
-    $wp_query->query('category_name=short-stories&posts_per_page=1'.get_option('posts_per_page').'&paged=' . $paged);
+    $wp_query->query('category_name=short-stories&posts_per_page='.get_option('posts_per_page').'&paged=' . $paged);
 ?>
     <div class='page-single-container'>
 <?php

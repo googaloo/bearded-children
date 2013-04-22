@@ -65,7 +65,7 @@
 	width: $contWidth * 0.65;
 	float: left;
 	border-bottom: 2px solid $BCblue;
-	padding-bottom: 50px;
+	padding-bottom: 15px;
 }
 
 .tabs {
@@ -75,7 +75,32 @@
 }
 
 .tabs-header {
-	color: $BCorange;
-	border-bottom: 5px solid $BCorange;
+	color: #FFF;
 	font-size: 1.75em;
+	margin-bottom: 0;
+	background: #ff9c14; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ff9c14 0%, #ffbe65 31%, #ff9c14 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff9c14), color-stop(31%,#ffbe65), color-stop(100%,#ff9c14)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ff9c14 0%,#ffbe65 31%,#ff9c14 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ff9c14 0%,#ffbe65 31%,#ff9c14 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ff9c14 0%,#ffbe65 31%,#ff9c14 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ff9c14 0%,#ffbe65 31%,#ff9c14 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9c14', endColorstr='#ff9c14',GradientType=1 ); /* IE6-9 */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.channel-link {
+	color: $lightBCblue;
+}
+
+.channel-link:hover {
+	color: #FFF;
+}
+
+.whats-new-channel {
+	background: $BCblue;
+	padding: 5px 10px;
+	float: right;
 }

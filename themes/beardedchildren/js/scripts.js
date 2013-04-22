@@ -43,4 +43,18 @@ jQuery(document).ready(function($) {
 
 	});
 
+	// MORE BUTTON
+
+	$('.tabs').on("mouseleave", function(e) {
+
+		$('.more-box-top').animate({marginTop: '-64px'}, 200);
+
+	});
+
+	$('.tabs').on("mouseenter", function(e) {
+
+		$('.more-box-top').animate({marginTop: '-25px'}, 200);
+
+	});
+
 });

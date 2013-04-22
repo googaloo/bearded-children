@@ -53,7 +53,10 @@ class home_new_widget extends WP_Widget {
 	        <div id="tabs-1" class='tabs'>
 
 	        	<h2 class="tabs-header">As the Beard Grows</h2>
-	        	<div class='more-box-top'><a href='index.php?page_id=27'>MORE</div></a>
+	        	<div class="more-container">
+	        		<p class="header-description">The bearded Blog</p>
+	        		<a href='index.php?page_id=27'><div class='more-box-top'>MORE</div></a>
+	        	</div>
 
 	        	<?php
 
@@ -89,7 +92,10 @@ class home_new_widget extends WP_Widget {
 	        <div id="tabs-2" class='tabs'>
 
 	        	<h2 class="tabs-header">Videos</h2>
-	        	<div class='more-box-top'><a href='index.php?page_id=151'>MORE</a></div>
+	        	<div class="more-container">
+	        		<p class="header-description">You should like... watch these... or don't, whatever...</p>
+	        		<a href='index.php?page_id=151'><div class='more-box-top'>MORE</div></a>
+	        	</div>
 
 	        	<?php
 
@@ -105,10 +111,10 @@ class home_new_widget extends WP_Widget {
 
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<div class="date-and-author-box">Date: <span class="head-date"><?php the_time('Y-m-d'); ?></span>Author: <a href="<?php the_author_link(); ?>"><span class="head-author"><?php the_author(); ?></span></a></div>
+	        				<a href="<?php bloginfo('url'); ?>/<?php echo $bc_channel; ?>" class="channel-link"><span class="whats-new-channel"><?php echo $bc_channel; ?></span></a>
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
-	        				<a href="<?php bloginfo('url'); ?>/<?php echo $bc_channel; ?>"><span class="whats-new-channel"><?php echo $bc_channel; ?></span></a>
-
+	        				
 	        			</div><!-- end .tabs-single-container -->
 
 				<?php
@@ -127,7 +133,10 @@ class home_new_widget extends WP_Widget {
 	        <div id="tabs-3" class='tabs'>
 
 	        	<h2 class="tabs-header">Beard Play</h2>
-	        	<div class='more-box-top'><a href='index.php?page_id=153'>MORE</a></div>
+	        	<div class="more-container">
+	        		<p class="header-description">All things Video Games. AWWWWW YYYEEEAAAA!</p>
+	        		<a href='index.php?page_id=153'><div class='more-box-top'>MORE</div></a>
+	        	</div>
 
 	        	<?php
 
@@ -136,14 +145,16 @@ class home_new_widget extends WP_Widget {
 
 	        		while ( $beard_plays_loop->have_posts() ) : $beard_plays_loop->the_post();
 
+	        		$play_channel = get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true);
+
 	        	?>
 	        			<div class="tabs-single-container">
 
 	        				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 	        				<div class="date-and-author-box">Date: <span class="head-date"><?php the_time('Y-m-d'); ?></span>Author: <a href="<?php the_author_link(); ?>"><span class="head-author"><?php the_author(); ?></span></a></div>
+	        				<a href="<?php bloginfo('url'); ?>/<?php echo $play_channel; ?>" class="channel-link"><span class="whats-new-channel"><?php echo $play_channel; ?></span></a>
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
-	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
 	        			</div><!-- end .tabs-single-container -->
 
@@ -162,8 +173,11 @@ class home_new_widget extends WP_Widget {
 
 	    	<div id="tabs-4" class='tabs'>
 
-	    		<h2 class="tabs-header">Short Stories</h2>
-	    		<div class='more-box-top'><a href='index.php?page_id=299'>MORE </a></div>
+	        	<h2 class="tabs-header">Short Stories</h2>
+	        	<div class="more-container">
+	        		<p class="header-description">Read some stories, usually Sci-Fi</p>
+	        		<a href='index.php?page_id=299'><div class='more-box-top'>MORE</div></a>
+	        	</div>
 
 	        	<?php
 
@@ -454,8 +468,8 @@ class beard_play_new_widget extends WP_Widget {
 	        <div id="tabs-1">
 
 	        	<?php
-
-	        	$growth_loop = new WP_Query ( array('post_type' => 'post', 'category_name' => 'as-the-beard-grows', 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DESC') );
+	        	$argsss=array('tag'=>'games-2', 'post_type'=>'post', 'category_name'=>'as-the-beard-grows', 'posts_per_page'=>4, 'orderby'=>'date', 'order'=>'DESC' );
+	        	$growth_loop = new WP_Query ( $argsss );
 	        	
 	        	if ( $growth_loop->have_posts() ) : 
 
@@ -468,7 +482,6 @@ class beard_play_new_widget extends WP_Widget {
 	        				<div class="date-and-author-box">Date: <span class="head-date"><?php the_time('Y-m-d'); ?></span>Author: <a href="<?php the_author_link(); ?>"><span class="head-author"><?php the_author(); ?></span></a></div>
 	        				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
 	        				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
-	        				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-videos-channel', true); ?></span>
 
 	        			</div><!-- end .tabs-single-container -->
 

@@ -73,6 +73,19 @@ root {
   margin-right: -30%;
 }
 
+.header-description {
+  color: #ff9c14;
+  font-weight: bold;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.more-container {
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+}
+
 .more-box-bottom, .more-box-top {
   font-size: 1.25em;
   float: right;
@@ -81,7 +94,8 @@ root {
 }
 
 .more-box-top {
-  margin-top: -23px;
+  color: #FFF;
+  margin-top: -64px;
   -webkit-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
 }
@@ -96,7 +110,7 @@ root {
   background: #ffbe65;
 }
 
-.more-box-top a, .more-box-bottom a {
+.more-box-bottom a {
   color: #FFF;
 }
 
@@ -105,7 +119,6 @@ root {
   font-size: .8em;
   width: 100%;
   margin-top: -15px;
-  padding-bottom: 35px;
 }
 
 .date-and-author-box a {
@@ -388,7 +401,7 @@ root {
   width: 578.5px;
   float: left;
   border-bottom: 2px solid #218ee8;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
 }
 
 .tabs {
@@ -398,9 +411,42 @@ root {
 }
 
 .tabs-header {
-  color: #ff9c14;
-  border-bottom: 5px solid #ff9c14;
+  color: #FFF;
   font-size: 1.75em;
+  margin-bottom: 0;
+  background: #ff9c14;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #ff9c14 0%, #ffbe65 31%, #ff9c14 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ff9c14), color-stop(31%, #ffbe65), color-stop(100%, #ff9c14));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #ff9c14 0%, #ffbe65 31%, #ff9c14 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #ff9c14 0%, #ffbe65 31%, #ff9c14 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #ff9c14 0%, #ffbe65 31%, #ff9c14 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #ff9c14 0%, #ffbe65 31%, #ff9c14 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9c14', endColorstr='#ff9c14',GradientType=1 );
+  /* IE6-9 */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.channel-link {
+  color: #8cc1e5;
+}
+
+.channel-link:hover {
+  color: #FFF;
+}
+
+.whats-new-channel {
+  background: #218ee8;
+  padding: 5px 10px;
+  float: right;
 }
 
 .main-footer {
