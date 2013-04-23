@@ -57,4 +57,31 @@ jQuery(document).ready(function($) {
 
 	});
 
+
+	// POST SOCIAL
+	// Handling pop ups for Facebook, Twitter, etc
+	$('a[rel=popwindow]').on('click', function(e) {
+
+		e.preventDefault();
+
+		var link = $(this).attr('href');
+
+		window.open(link, '', 'width=500,height=445');
+
+	});
+
+	// Handling Icon background rollovers
+	$('.post-social').css("backgroundPosition", "0 -34px");
+	$('.post-social').on('mouseenter', function(e) {
+
+		$(this).css( "backgroundPosition", '0 0' );
+
+	});
+
+	$('.post-social').on('mouseleave', function(e) {
+
+		$(this).css( "backgroundPosition", '0 -34px' );
+
+	});
+
 });

@@ -39,11 +39,11 @@
 
     wp_reset_query(); ?>
 
-    	<div class='primary-sidebar-container'>
+<div class='primary-sidebar-container'>
 
-		<?php dynamic_sidebar('primary'); ?>
-			
-	</div><!-- end .primary-sidebar-container -->
+	<?php dynamic_sidebar('primary'); ?>
+		
+</div><!-- end .primary-sidebar-container -->
 
 <?php
 	get_sidebar();

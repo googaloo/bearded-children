@@ -26,32 +26,6 @@ register_sidebar ( array(
 
     ));
 
-// TABS
-register_sidebar ( array(
-
-    'name' => 'Home New Tabs',
-    'id' => 'home_new_tab',
-    'description' => 'Sidebar for the Home Page What\'s new widget'
-
-    ));
-
-register_sidebar ( array(
-
-    'name' => 'Videos New Tabs',
-    'id' => 'videos_new_tab',
-    'description' => 'Sidebar for the Videos What\'s new widget'
-
-    ));
-
-register_sidebar ( array(
-
-    'name' => 'Beard Play New Tabs',
-    'id' => 'beard_play_new_tab',
-    'description' => 'Sidebar for the Beard Play What\'s new widget'
-
-    ));
-
-
 //////////////////////////////////////////////////////////////////
 // WIDGETS //
 ////////////////////////////////////////////////////////////////
@@ -105,41 +79,6 @@ function collect_email($email) {
 //////////////////////////////////////////////////////////////////
 // SHORT CODES //
 ////////////////////////////////////////////////////////////////
-
-// The New Tabs
-add_shortcode( 'home_new_tab', 'home_new_shortcode' );
-add_shortcode( 'videos_new_tab', 'videos_new_shortcode' );
-add_shortcode( 'beard_play_new_tab', 'beard_play_new_shortcode' );
-
-function home_new_shortcode() {
-
-    ob_start();
-    dynamic_sidebar('home_new_tab');
-    $html = ob_get_contents();
-    ob_end_clean();
-    return $html;
-
-}
-
-function videos_new_shortcode() {
-
-    ob_start();
-    dynamic_sidebar('videos_new_tab');
-    $html = ob_get_contents();
-    ob_end_clean();
-    return $html;
-
-}
-
-function beard_play_new_shortcode() {
-
-    ob_start();
-    dynamic_sidebar('beard_play_new_tab');
-    $html = ob_get_contents();
-    ob_end_clean();
-    return $html;
-
-}
 
 //////////////////////////////////////////////////////////////////
 // MISC //
