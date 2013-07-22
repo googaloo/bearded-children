@@ -33,10 +33,10 @@
 			<div class='social-box'>
         
 				<ul class='social-list'>
-				    <li class='social-item youtube'><a href='#' class='social-link social-yt'>Youtube</a></li>
-				    <li class='social-item facebook'><a href='#' class='social-link social-fb'>Facebook</a></li>
-				    <li class='social-item twitter'><a href='#' class='social-link social-tw'>Twitter</a></li>
-				    <li class='social-item social-rss'><a href='#' class='social-link social-em'>RSS</a></li>
+				    <li class='social-item youtube'><a href='http://www.youtube.com/beardedchildrendotcm' class='social-link social-yt'><div>Youtube</div></li>
+				    <li class='social-item facebook'><a href='http://www.facebook.com/beardedchildren' class='social-link social-fb'><div>Facebook</div></a></li>
+				    <li class='social-item twitter'><a href='http://www.twitter.com/beardchildren' class='social-link social-tw'><div>Twitter</div></a></li>
+				    <li class='social-item social-rss'><a href='<?php bloginfo('rss2_url'); ?>' class='social-link social-em'><div>RSS</div></a></li>
 				</ul>
 			        
 			</div><!-- end .social-box -->

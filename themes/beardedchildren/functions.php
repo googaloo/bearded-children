@@ -86,3 +86,11 @@ function collect_email($email) {
 
 // Remove width and height attributes from images
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 ); add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 ); function remove_thumbnail_dimensions( $html ) { $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html ); return $html; }
+
+// Add Custom Post Types to RSS
+function custom_feed_request( $vars ) {
+ if (isset($vars['feed']) && !isset($vars['post_type']))
+  $vars['post_type'] = array( 'post' ); // Add Custom Post Types here
+ return $vars;
+}
+add_filter( 'request', 'custom_feed_request' );

@@ -46,7 +46,19 @@
 
     				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     				<div class="date-and-author-box">Date: <span class="head-date"><?php the_time('Y-m-d'); ?></span>Author: <a href="<?php the_author_link(); ?>"><span class="head-author"><?php the_author(); ?></span></a></div>
-    				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
+                        <div class="post-social-box">
+
+                            <ul class="post-social-box-list">
+
+                                <li><a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink(); ?>" rel="popwindow"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/facebook.png) no-repeat;'></div></a></li>
+                                <li><a href="https://twitter.com/share?url=<?php echo the_permalink(); ?>" rel="popwindow"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/twitter.png) no-repeat;'></div></a></li>
+                                <li><a href="https://plus.google.com/share?url=<?php echo the_permalink(); ?>" rel="popwindow"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/googleplus.png) no-repeat; margin-left: 10px;'></div></a></li>
+                                <li><a href="http://www.reddit.com/submit?url=<?php echo the_permalink(); ?>" target="_blank"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/reddit.png) no-repeat;'></div></a></li>
+
+                            </ul>
+
+                        </div><!-- end .post-social-box -->
+                    <div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
     				<p><?php echo get_post_meta(get_the_id(), 'wpcf-video-description', true); ?></p>
 
     			</div><!-- end .tabs-single-container -->
@@ -79,7 +91,19 @@
 
     				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     				<div class="date-and-author-box">Date: <span class="head-date"><?php the_time('Y-m-d'); ?></span>Author: <a href="<?php the_author_link(); ?>"><span class="head-author"><?php the_author(); ?></span></a></div>
-    				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>	        				
+                    <div class="post-social-box">
+
+                        <ul class="post-social-box-list">
+
+                            <li><a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink(); ?>" rel="popwindow"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/facebook.png) no-repeat;'></div></a></li>
+                            <li><a href="https://twitter.com/share?url=<?php echo the_permalink(); ?>" rel="popwindow"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/twitter.png) no-repeat;'></div></a></li>
+                            <li><a href="https://plus.google.com/share?url=<?php echo the_permalink(); ?>" rel="popwindow"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/googleplus.png) no-repeat; margin-left: 10px;'></div></a></li>
+                            <li><a href="http://www.reddit.com/submit?url=<?php echo the_permalink(); ?>" target="_blank"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/reddit.png) no-repeat;'></div></a></li>
+
+                        </ul>
+
+                    </div><!-- end .post-social-box -->
+                    <div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>	        				
     				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
     				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
@@ -114,7 +138,19 @@
 
     				<h3 class="whats-new-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     				<div class="date-and-author-box">Date: <span class="head-date"><?php the_time('Y-m-d'); ?></span>Author: <a href="<?php the_author_link(); ?>"><span class="head-author"><?php the_author(); ?></span></a></div>
-    				<div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
+                    <div class="post-social-box">
+
+                        <ul class="post-social-box-list">
+
+                            <li><a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo the_permalink(); ?>" rel="popwindow"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/facebook.png) no-repeat;'></div></a></li>
+                            <li><a href="https://twitter.com/share?url=<?php echo the_permalink(); ?>" rel="popwindow"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/twitter.png) no-repeat;'></div></a></li>
+                            <li><a href="https://plus.google.com/share?url=<?php echo the_permalink(); ?>" rel="popwindow"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/googleplus.png) no-repeat; margin-left: 10px;'></div></a></li>
+                            <li><a href="http://www.reddit.com/submit?url=<?php echo the_permalink(); ?>" target="_blank"><div class="post-social" style='background: url(<?php bloginfo('template_directory'); ?>/images/icons/social/posts/reddit.png) no-repeat;'></div></a></li>
+
+                        </ul>
+
+                    </div><!-- end .post-social-box -->
+                    <div class="whats-new-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a></div>
     				<p><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-description', true); ?></p>
     				<span class="whats-new-channel"><?php echo get_post_meta(get_the_id(), 'wpcf-lets-play-channel', true); ?></span>
 
